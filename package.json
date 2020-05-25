@@ -1,0 +1,33 @@
+{
+  "name": "t-t",
+  "version": "1.0.0",
+  "description": "job order from Bondarets S.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "style": "sass --watch src/assets/style/style.scss src/assets/style/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CasperCarver/t-t.git"
+  },
+  "keywords": [
+    "freelance",
+    "html",
+    "scss",
+    "javascript",
+    "telegramApi"
+  ],
+  "author": "CasperCarver <pigulevsky.gleb@ya.ru>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CasperCarver/t-t/issues"
+  },
+  "homepage": "https://github.com/CasperCarver/t-t#readme",
+  "devDependencies": {
+    "sass": "^1.26.5",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11"
+  },
+  "dependencies": {}
+}
