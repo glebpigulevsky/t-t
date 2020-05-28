@@ -1,0 +1,129 @@
+.problem{
+  
+  width: 1440px;
+  height: auto;
+  margin: 0 auto;
+  .problem-div{
+    padding: 102px 102px 58px 102px;
+    h2{
+      font-family: 'Exo 2';
+      font-style: normal;
+      font-weight: bold;
+      font-size: 72px;
+      line-height: 96px;
+      color: #000000;
+    }
+    p{
+      font-family: 'Exo 2';
+      font-style: normal;
+      font-weight: normal;
+      font-size: 24px;
+      line-height: 32px;
+  
+      color: #000000;
+    }
+    
+  }
+  .problem-verticalline{
+    padding: 0px 103px 0px 103px;
+    div{
+      position: relative;
+      height: 560px;
+      img{
+        position: absolute;
+        width: 56%;
+      }
+      .problem-vert{
+        z-index: 2;
+        top: 50px;
+      }
+      .problem-hor{
+        left: 520px;
+      }
+    }
+  }
+
+  h3{
+    padding-bottom: 50px;
+    font-family: 'Exo 2';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 64px;
+    color: #000000;
+  }
+  .problem-blinking{
+    padding: 0px 103px 0 103px;
+    .problem-blinking_box{
+      margin-bottom: 100px;
+      position: relative;
+      height: 450px;
+      .problem-blackscreen{
+        position: absolute;
+        z-index: 2;
+        top: 50px;
+        img{
+          width: 64%;
+        }
+      }
+      .problem-blinkscreen{
+        
+        position: absolute;
+        width: 56%;
+        height: 440px;
+        left: 520px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-image: url(../img/problems/tvbox.png);
+        .problem-blinkscreen_apple{
+          top: 9px;
+          left: 9px;
+          position: absolute;
+          width: 673px;
+          height: 379px;
+          overflow: hidden;
+          img{
+            position: relative;
+            top: -269px;
+            width: 100%;
+          }
+        }
+      }
+    }
+    .blinking-text{
+      padding: 0px 103px 0px 103px;
+      font-family: 'Exo 2';
+      font-style: normal;
+      font-weight: normal;
+      font-size: 24px;
+      line-height: 32px;
+      color: #000000;
+    }
+    .bolder{
+      margin-top: 50px;
+      font-weight: bold;
+      font-size: 30px;
+      line-height: 40px;
+    }
+  }
+  .problem-structure{
+    margin-top: 70px;
+    padding: 0 103px 0 103px;
+    h3{
+      font-family: 'Exo 2';
+      font-style: normal;
+      font-weight: 600;
+      font-size: 48px;
+      line-height: 64px;
+      color: #000000;
+    }
+    p{
+      font-family: 'Exo 2';
+      font-style: normal;
+      font-weight: normal;
+      font-size: 24px;
+      line-height: 32px;
+      color: #000000;
+    }
+  }
+}

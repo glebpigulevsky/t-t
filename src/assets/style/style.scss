@@ -1,4 +1,14 @@
-body {
-  background-color: black;
-  color: white;
+@import '_header';
+@import '_descr';
+@import '_about';
+@import '_problems';
+@import '_works';
+@import '_price';
+@import '_contact';
+@import '_footer';
+
+.container{
+  width: 100%;
+  height: auto;
+  overflow-x: hidden;
 }

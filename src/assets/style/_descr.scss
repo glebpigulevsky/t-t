@@ -1,0 +1,31 @@
+.description{
+  
+}
+.descr{
+  margin: 0 auto;
+    width: 1440px;
+    height: 586px;
+    
+    .descr-flex{
+      padding: 136px 155px 136px 190px;
+      display: flex;
+      justify-content: space-between;
+      
+      
+      .descr-text{
+        width: 461px;
+        height: 310px;
+        font-family: 'Exo 2';
+        font-style: normal;
+        font-weight: normal;
+        font-size: 30px;
+        line-height: 40px;
+        color: #000000;
+        span{
+          font-style: italic;
+          font-weight: 600;
+        }
+      }
+    }
+    
+}

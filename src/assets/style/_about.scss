@@ -1,0 +1,83 @@
+.aboutUs{
+  background: rgba(0, 0, 0, 0.6);
+  background-image: url(../img/about/bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.about{
+  
+  width: 1440px;
+  height: 876px;
+  margin: 0 auto;
+  
+  .about-text{
+    padding: 23px 102px 51px 102px ;
+    h2{
+      font-family: 'Exo 2';
+      font-style: normal;
+      font-weight: bold;
+      font-size: 96px;
+      line-height: 107px;
+      color: #FFFFFF;
+    }
+    p{
+      padding-top: 50px;
+      font-family: 'Exo 2';
+      font-style: normal;
+      font-weight: normal;
+      font-size: 24px;
+      line-height: 32px;
+      color: #FFFFFF;
+      a{
+        color: #FFFFFF;
+        text-decoration: underline;
+        font-weight: bold;
+      }
+    }
+  }
+  .about-advantages{
+    padding: 0px 103px 50px 103px;
+    h3{
+      text-align: center;
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: 900;
+      font-size: 48px;
+      line-height: 56px;
+      color: #FFFFFF;
+    }
+    .about-advantages_blocks{
+      padding-top: 67px;
+      display: grid;
+      grid-template-areas: 'a a a a';
+      div{
+        position: relative;
+        padding-top: 68px;
+        text-align: center;
+        width: 290px;
+        height: 184px;
+        background: rgba(0, 0, 0, 0.8);
+        border: 0.5px solid #FFFFFF;
+        box-sizing: border-box;
+        border-radius: 5px;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 28px;
+        text-align: center;
+        color: #FFFFFF;
+      }
+      div::before{
+        position: absolute;
+        content: '';
+        background-image: url('../img/about/flag.png');
+        background-repeat: no-repeat;
+        width: 40px;
+        height: 48px;
+        top: 0px;
+        left:125px;
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+.gallery{
+  background: rgba(0, 0, 0, 0.6);
+  background-image: url(../img/work/bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+  .carousel{
+    
+    
+    width: 1440px;
+    height: 748px;
+    margin: 0 auto;
+    h3{
+      font-family: 'Exo 2';
+      font-style: normal;
+      font-weight: 600;
+      font-size: 72px;
+      line-height: 96px;
+      text-align: center;
+      color: #FFFFFF;
+    }
+  }
+}

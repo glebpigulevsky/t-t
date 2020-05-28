@@ -1,0 +1,128 @@
+header{
+  
+    background-size: cover;
+    background-color: #7f7f7f;
+  
+  .header{
+    margin: 0 auto;
+    width: 1440px;
+    height: 830px;
+    background-position: 102% 2%;
+    background-repeat: no-repeat;
+    background-image: url(../img/header/tv.jpg);
+    
+    .nav{
+      display: flex;
+      justify-content: space-between;
+      padding: 30px 103px 0px 103px;
+      .nav-logo{
+        border: 1px solid red;
+        position: relative;
+        width:100px;
+        height: 89px;
+        background-repeat: no-repeat;
+        background-image: url(../img/header/logo.png);
+      }
+      
+      .nav-contacts{
+        display: flex;
+        justify-content: space-between;
+        
+        width: 820px;
+    
+        .nav-contacts_adress{
+          border: 1px solid red;
+          position: relative;
+          font-family: 'Exo 2', sans-serif;
+          font-style: normal;
+          font-weight: 600;
+          font-size: 24px;
+          line-height: 32px;
+  
+          color: #FFFFFF;
+        }
+        .nav-contacts_adress::before{
+          left: -60px;
+          position: absolute;
+          content: '';
+          background-image: url(../img/header/locat.png);
+          width: 39px;
+          height: 52px;
+        }
+    
+        .nav-contacts_phone{
+          border: 1px solid red;
+          position: relative;
+          font-family: 'Exo 2', sans-serif;
+          font-style: normal;
+          font-weight: 600;
+          font-size: 24px;
+          line-height: 32px;
+          color: #FFFFFF;
+          text-align: center;
+          a{
+            text-decoration: underline;
+            cursor: pointer;
+          }
+        }
+        .nav-contacts_phone::before{
+          left: -65px;
+          position: absolute;
+          content: '';
+          background-image: url(../img/header/phone.png);
+          width: 52px;
+          height: 52px;
+        }
+      }
+    }
+    .header-main{
+      padding: 151px 103px;
+       p:first-child{
+        font-family: Roboto;
+        font-style: italic;
+        font-weight: 900;
+        font-size: 72px;
+        line-height: 84px;
+        color: #FFFFFF;
+      }
+      p:nth-child(2){
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: 900;
+        font-size: 96px;
+        line-height: 112px;
+        color: #FFFFFF;
+        span{
+          font-family: Roboto;
+          font-style: italic;
+          font-weight: 900;
+          font-size: 96px;
+          line-height: 112px;
+
+          color: #DA1A1A;
+        }
+      }
+      p:last-child{
+        margin-top: 37px;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 48px;
+        line-height: 56px;
+  
+        color: #FFFFFF;
+      }
+    }
+    .header-form{
+      position: absolute;
+      left: 52%;
+      top: 710px;
+      width: 520px;
+      height: 769px;
+      background: #FFFFFF;
+      box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.25);
+      z-index: 10;
+    }
+  }
+}
+

@@ -1,0 +1,77 @@
+.contacts{
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  .contacts_text{
+    h3{
+      font-family: 'Exo 2';
+      font-style: normal;
+      font-weight: 600;
+      font-size: 72px;
+      line-height: 96px;
+      text-align: center;
+      color: #000000;
+    }
+  .contacts_text-addr{
+
+    margin: 50px auto 0px auto;
+    display: flex;
+    width: 1150px;
+    height: 52px;
+    justify-content: space-between;
+     p{
+      font-family: 'Exo 2';
+      font-style: normal;
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 32px;
+      color: #000000;
+      span{
+        font-style: italic;
+        font-weight: 400;
+      }
+    }
+    .contacts_adress{
+      position: relative;
+    }
+    .contacts_adress::before{
+      content: '';
+      position: absolute;
+      background-image: url(../img/header/locat.png);
+      width:50px;
+      height: 52px;
+      background-repeat: no-repeat;
+      left: -47px;
+      top: -25px;
+    }
+    .contacts_time{
+      position: relative;
+    }
+    .contacts_time::before{
+      content: '';
+      position: absolute;
+      background-image: url(../img/contacts/watch.png);
+      width:52px;
+      height: 52px;
+      background-repeat: no-repeat;
+      left: -80px;
+      top: -20px;
+    }
+  }
+  }
+  .contacts_map{
+    width: 100%;
+    height: 796px;
+    border: 1px solid red;
+  }
+  .contacts_form{
+    position: absolute;
+    width: 350px;
+    height: 495px;
+    top: 300px;
+    left: 940px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.25);
+    z-index: 2;
+  }
+}

@@ -1,6 +1,596 @@
-body {
-  background-color: black;
-  color: white;
+header {
+  background-size: cover;
+  background-color: #7f7f7f;
+}
+header .header {
+  margin: 0 auto;
+  width: 1440px;
+  height: 830px;
+  background-position: 102% 2%;
+  background-repeat: no-repeat;
+  background-image: url(../img/header/tv.jpg);
+}
+header .header .nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 103px 0px 103px;
+}
+header .header .nav .nav-logo {
+  border: 1px solid red;
+  position: relative;
+  width: 100px;
+  height: 89px;
+  background-repeat: no-repeat;
+  background-image: url(../img/header/logo.png);
+}
+header .header .nav .nav-contacts {
+  display: flex;
+  justify-content: space-between;
+  width: 820px;
+}
+header .header .nav .nav-contacts .nav-contacts_adress {
+  border: 1px solid red;
+  position: relative;
+  font-family: "Exo 2", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+  color: #FFFFFF;
+}
+header .header .nav .nav-contacts .nav-contacts_adress::before {
+  left: -60px;
+  position: absolute;
+  content: "";
+  background-image: url(../img/header/locat.png);
+  width: 39px;
+  height: 52px;
+}
+header .header .nav .nav-contacts .nav-contacts_phone {
+  border: 1px solid red;
+  position: relative;
+  font-family: "Exo 2", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+  color: #FFFFFF;
+  text-align: center;
+}
+header .header .nav .nav-contacts .nav-contacts_phone a {
+  text-decoration: underline;
+  cursor: pointer;
+}
+header .header .nav .nav-contacts .nav-contacts_phone::before {
+  left: -65px;
+  position: absolute;
+  content: "";
+  background-image: url(../img/header/phone.png);
+  width: 52px;
+  height: 52px;
+}
+header .header .header-main {
+  padding: 151px 103px;
+}
+header .header .header-main p:first-child {
+  font-family: Roboto;
+  font-style: italic;
+  font-weight: 900;
+  font-size: 72px;
+  line-height: 84px;
+  color: #FFFFFF;
+}
+header .header .header-main p:nth-child(2) {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 96px;
+  line-height: 112px;
+  color: #FFFFFF;
+}
+header .header .header-main p:nth-child(2) span {
+  font-family: Roboto;
+  font-style: italic;
+  font-weight: 900;
+  font-size: 96px;
+  line-height: 112px;
+  color: #DA1A1A;
+}
+header .header .header-main p:last-child {
+  margin-top: 37px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 48px;
+  line-height: 56px;
+  color: #FFFFFF;
+}
+header .header .header-form {
+  position: absolute;
+  left: 52%;
+  top: 710px;
+  width: 520px;
+  height: 769px;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.25);
+  z-index: 10;
+}
+
+.descr {
+  margin: 0 auto;
+  width: 1440px;
+  height: 586px;
+}
+.descr .descr-flex {
+  padding: 136px 155px 136px 190px;
+  display: flex;
+  justify-content: space-between;
+}
+.descr .descr-flex .descr-text {
+  width: 461px;
+  height: 310px;
+  font-family: "Exo 2";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 40px;
+  color: #000000;
+}
+.descr .descr-flex .descr-text span {
+  font-style: italic;
+  font-weight: 600;
+}
+
+.aboutUs {
+  background: rgba(0, 0, 0, 0.6);
+  background-image: url(../img/about/bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.about {
+  width: 1440px;
+  height: 876px;
+  margin: 0 auto;
+}
+.about .about-text {
+  padding: 23px 102px 51px 102px;
+}
+.about .about-text h2 {
+  font-family: "Exo 2";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 96px;
+  line-height: 107px;
+  color: #FFFFFF;
+}
+.about .about-text p {
+  padding-top: 50px;
+  font-family: "Exo 2";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 32px;
+  color: #FFFFFF;
+}
+.about .about-text p a {
+  color: #FFFFFF;
+  text-decoration: underline;
+  font-weight: bold;
+}
+.about .about-advantages {
+  padding: 0px 103px 50px 103px;
+}
+.about .about-advantages h3 {
+  text-align: center;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 48px;
+  line-height: 56px;
+  color: #FFFFFF;
+}
+.about .about-advantages .about-advantages_blocks {
+  padding-top: 67px;
+  display: grid;
+  grid-template-areas: "a a a a";
+}
+.about .about-advantages .about-advantages_blocks div {
+  position: relative;
+  padding-top: 68px;
+  text-align: center;
+  width: 290px;
+  height: 184px;
+  background: rgba(0, 0, 0, 0.8);
+  border: 0.5px solid #FFFFFF;
+  box-sizing: border-box;
+  border-radius: 5px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
+  color: #FFFFFF;
+}
+.about .about-advantages .about-advantages_blocks div::before {
+  position: absolute;
+  content: "";
+  background-image: url("../img/about/flag.png");
+  background-repeat: no-repeat;
+  width: 40px;
+  height: 48px;
+  top: 0px;
+  left: 125px;
+}
+
+.problem {
+  width: 1440px;
+  height: auto;
+  margin: 0 auto;
+}
+.problem .problem-div {
+  padding: 102px 102px 58px 102px;
+}
+.problem .problem-div h2 {
+  font-family: "Exo 2";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 72px;
+  line-height: 96px;
+  color: #000000;
+}
+.problem .problem-div p {
+  font-family: "Exo 2";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 32px;
+  color: #000000;
+}
+.problem .problem-verticalline {
+  padding: 0px 103px 0px 103px;
+}
+.problem .problem-verticalline div {
+  position: relative;
+  height: 560px;
+}
+.problem .problem-verticalline div img {
+  position: absolute;
+  width: 56%;
+}
+.problem .problem-verticalline div .problem-vert {
+  z-index: 2;
+  top: 50px;
+}
+.problem .problem-verticalline div .problem-hor {
+  left: 520px;
+}
+.problem h3 {
+  padding-bottom: 50px;
+  font-family: "Exo 2";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 64px;
+  color: #000000;
+}
+.problem .problem-blinking {
+  padding: 0px 103px 0 103px;
+}
+.problem .problem-blinking .problem-blinking_box {
+  margin-bottom: 100px;
+  position: relative;
+  height: 450px;
+}
+.problem .problem-blinking .problem-blinking_box .problem-blackscreen {
+  position: absolute;
+  z-index: 2;
+  top: 50px;
+}
+.problem .problem-blinking .problem-blinking_box .problem-blackscreen img {
+  width: 64%;
+}
+.problem .problem-blinking .problem-blinking_box .problem-blinkscreen {
+  position: absolute;
+  width: 56%;
+  height: 440px;
+  left: 520px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url(../img/problems/tvbox.png);
+}
+.problem .problem-blinking .problem-blinking_box .problem-blinkscreen .problem-blinkscreen_apple {
+  top: 9px;
+  left: 9px;
+  position: absolute;
+  width: 673px;
+  height: 379px;
+  overflow: hidden;
+}
+.problem .problem-blinking .problem-blinking_box .problem-blinkscreen .problem-blinkscreen_apple img {
+  position: relative;
+  top: -269px;
+  width: 100%;
+}
+.problem .problem-blinking .blinking-text {
+  padding: 0px 103px 0px 103px;
+  font-family: "Exo 2";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 32px;
+  color: #000000;
+}
+.problem .problem-blinking .bolder {
+  margin-top: 50px;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 40px;
+}
+.problem .problem-structure {
+  margin-top: 70px;
+  padding: 0 103px 0 103px;
+}
+.problem .problem-structure h3 {
+  font-family: "Exo 2";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 64px;
+  color: #000000;
+}
+.problem .problem-structure p {
+  font-family: "Exo 2";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 32px;
+  color: #000000;
+}
+
+.gallery {
+  background: rgba(0, 0, 0, 0.6);
+  background-image: url(../img/work/bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.gallery .carousel {
+  width: 1440px;
+  height: 748px;
+  margin: 0 auto;
+}
+.gallery .carousel h3 {
+  font-family: "Exo 2";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 72px;
+  line-height: 96px;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.price {
+  margin-top: 100px;
+}
+.price .price-text {
+  width: 1235px;
+  height: auto;
+  margin: 0 auto;
+}
+.price .price-text h3 {
+  font-family: "Exo 2";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 72px;
+  line-height: 96px;
+  text-align: center;
+  color: #000000;
+}
+.price .price-text p {
+  margin-top: 76px;
+  font-family: "Exo 2";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 40px;
+  color: #000000;
+}
+.price .price-text .price-flex {
+  margin-top: 47px;
+  display: flex;
+}
+
+.contacts {
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+.contacts .contacts_text h3 {
+  font-family: "Exo 2";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 72px;
+  line-height: 96px;
+  text-align: center;
+  color: #000000;
+}
+.contacts .contacts_text .contacts_text-addr {
+  margin: 50px auto 0px auto;
+  display: flex;
+  width: 1150px;
+  height: 52px;
+  justify-content: space-between;
+}
+.contacts .contacts_text .contacts_text-addr p {
+  font-family: "Exo 2";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+  color: #000000;
+}
+.contacts .contacts_text .contacts_text-addr p span {
+  font-style: italic;
+  font-weight: 400;
+}
+.contacts .contacts_text .contacts_text-addr .contacts_adress {
+  position: relative;
+}
+.contacts .contacts_text .contacts_text-addr .contacts_adress::before {
+  content: "";
+  position: absolute;
+  background-image: url(../img/header/locat.png);
+  width: 50px;
+  height: 52px;
+  background-repeat: no-repeat;
+  left: -47px;
+  top: -25px;
+}
+.contacts .contacts_text .contacts_text-addr .contacts_time {
+  position: relative;
+}
+.contacts .contacts_text .contacts_text-addr .contacts_time::before {
+  content: "";
+  position: absolute;
+  background-image: url(../img/contacts/watch.png);
+  width: 52px;
+  height: 52px;
+  background-repeat: no-repeat;
+  left: -80px;
+  top: -20px;
+}
+.contacts .contacts_map {
+  width: 100%;
+  height: 796px;
+  border: 1px solid red;
+}
+.contacts .contacts_form {
+  position: absolute;
+  width: 350px;
+  height: 495px;
+  top: 300px;
+  left: 940px;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.25);
+  z-index: 2;
+}
+
+.foot {
+  background: #1B1B1B;
+}
+.foot .footer {
+  margin: 0 auto;
+  width: 1234px;
+  height: 276px;
+  background: #1B1B1B;
+  padding: 78px 103px 0px 103px;
+  display: flex;
+  justify-content: space-between;
+}
+.foot .footer .footer_nav h4 {
+  font-family: "Exo 2";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+  color: #FFFFFF;
+}
+.foot .footer .footer_nav ul li a {
+  font-family: "Exo 2";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+  text-decoration: none;
+  color: #FFFFFF;
+}
+.foot .footer .footer_nav ul li a:hover {
+  color: #FF0000;
+}
+.foot .footer .footer_phone {
+  margin-top: 30px;
+  font-family: "Exo 2";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 40px;
+  margin-left: 60px;
+  color: #FFFFFF;
+  position: relative;
+}
+.foot .footer .footer_phone::after {
+  position: absolute;
+  content: "";
+  width: 50px;
+  height: 50px;
+  background-image: url(../img/footer/telegram.png);
+  left: -65px;
+}
+.foot .footer .footer_phone::before {
+  position: absolute;
+  content: "";
+  width: 50px;
+  height: 50px;
+  background-image: url(../img/footer/viber.png);
+  left: -130px;
+}
+.foot .footer .footer_social {
+  display: flex;
+  justify-content: space-between;
+  width: 260px;
+  height: 254px;
+  align-items: center;
+}
+.foot .footer .footer_logo {
+  text-align: center;
+}
+.foot .footer_copyright {
+  width: 1400px;
+  height: 32px;
+  border-top: 1px solid #aaaaaa;
+  background-color: #1B1B1B;
+  margin: 0 auto;
+}
+.foot .footer_copyright .copyright_flex {
+  padding-top: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+.foot .footer_copyright .copyright_flex .copyright_email {
+  position: relative;
+}
+.foot .footer_copyright .copyright_flex .copyright_email a {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21px;
+  color: #AAAAAA;
+  text-decoration: none;
+}
+.foot .footer_copyright .copyright_flex .copyright_email::before {
+  left: -30px;
+  top: 2px;
+  position: absolute;
+  content: "";
+  width: 20px;
+  height: 16px;
+  background-image: url("../img/footer/mail.png");
+}
+.foot .footer_copyright div {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21px;
+  color: #AAAAAA;
+}
+
+.container {
+  width: 100%;
+  height: auto;
+  overflow-x: hidden;
 }
 
 /*# sourceMappingURL=style.css.map */
