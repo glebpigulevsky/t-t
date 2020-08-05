@@ -1,14 +1,36 @@
 @import '_header';
-@import '_descr';
+@import '_banner';
+@import '_banner__form';
 @import '_about';
 @import '_problems';
 @import '_works';
-@import '_price';
-@import '_contact';
-@import '_footer';
+@import '_price.scss';
+@import '_footer.scss';
+@import '_contact.scss';
 
-.container{
-  width: 100%;
+.container {
+  max-width: 1240px;
   height: auto;
   overflow-x: hidden;
+  margin: 0 auto;
+  padding: 0px 100px;
+  @media (max-width: 1440px) {
+    padding: 0px 40px;
+  }
+  @media (max-width: 767px) {
+    padding: 0px 10px;
+  }
+}
+.container__footer {
+  max-width: 100%;
+  padding: 0 20px;
+}
+.wrapper {
+  display: flex;
+  min-height: 100%;
+  overflow: hidden;
+  flex-direction: column;
+}
+.border-red {
+  border: 1px solid red;
 }

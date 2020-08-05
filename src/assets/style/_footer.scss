@@ -1,43 +1,48 @@
-.foot{
-  background: #1B1B1B;
-  .footer{
+.footer {
+  background: #1b1b1b;
+  .footer_flex {
+    padding: 0 60px 0 60px;
     margin: 0 auto;
-    width: 1234px;
     height: 276px;
-    background: #1B1B1B;
-    padding:78px 103px 0px 103px;
+    background: #1b1b1b;
+    margin-top: 57px;
     display: flex;
     justify-content: space-between;
-    
-    .footer_nav{
-      h4{
+
+    @media (max-width: 1280px) {
+      padding: 0 20px;
+    }
+    @media (max-width: 767px) {
+      display: none;
+    }
+    .footer_nav {
+      flex-shrink: 1;
+      h4 {
         font-family: 'Exo 2';
         font-style: normal;
         font-weight: 600;
         font-size: 24px;
         line-height: 32px;
-        color: #FFFFFF;
-        
+        color: #ffffff;
       }
-      ul{
-        li{
-          a{
+      ul {
+        li {
+          a {
             font-family: 'Exo 2';
             font-style: normal;
             font-weight: normal;
             font-size: 18px;
             line-height: 24px;
             text-decoration: none;
-            color: #FFFFFF;
+            color: #ffffff;
           }
-          a:hover{
-            color: #FF0000;
+          a:hover {
+            color: #ff0000;
           }
         }
-        
       }
     }
-    .footer_phone{
+    .footer_phone {
       margin-top: 30px;
       font-family: 'Exo 2';
       font-style: normal;
@@ -45,61 +50,92 @@
       font-size: 30px;
       line-height: 40px;
       margin-left: 60px;
-      color: #FFFFFF;
+      color: #ffffff;
       position: relative;
+      @media (max-width: 1080px) {
+        margin-left: 0px;
+        font-size: 24px;
+      }
     }
-    .footer_phone::after{
+    .footer_phone::after {
       position: absolute;
       content: '';
       width: 50px;
       height: 50px;
       background-image: url(../img/footer/telegram.png);
       left: -65px;
+      @media (max-width: 1080px) {
+        display: none;
+      }
     }
-    .footer_phone::before{
+    .footer_phone::before {
       position: absolute;
       content: '';
       width: 50px;
       height: 50px;
       background-image: url(../img/footer/viber.png);
       left: -130px;
+      @media (max-width: 1080px) {
+        display: none;
+      }
     }
-    .footer_social{
+    .footer_social {
       display: flex;
       justify-content: space-between;
-      width: 260px;
+      width: auto;
       height: 254px;
       align-items: center;
+      .nav_facebook_link {
+        margin: 0 40px;
+        @media (max-width: 1080px) {
+          margin: 0 10px;
+        }
+      }
     }
-    .footer_logo{
+    .footer_logo {
       text-align: center;
-      
     }
   }
-  .footer_copyright{
-    width: 1400px;
-    height: 32px;
+  .footer_copyright {
+    width: 100%;
+    height: auto;
     border-top: 1px solid #aaaaaa;
-    background-color:  #1B1B1B;
-    margin: 0 auto;
-    .copyright_flex{
+    background-color: #1b1b1b;
+
+    .copyright_flex {
       padding-top: 5px;
       display: flex;
+
       justify-content: space-between;
-      .copyright_email{
+      @media (max-width: 945px) {
+        flex-direction: column;
+        align-items: center;
+      }
+      .copyright_email {
         position: relative;
-        a{
+        @media (max-width: 945px) {
+          margin: 20px 0 25px 0;
+          text-align: center;
+          font-size: 16px;
+          line-height: 20px;
+        }
+        a {
           font-family: Roboto;
           font-style: normal;
           font-weight: normal;
           font-size: 18px;
           line-height: 21px;
 
-          color: #AAAAAA;
+          color: #aaaaaa;
           text-decoration: none;
+          @media (max-width: 945px) {
+            text-align: center;
+            font-size: 16px;
+            line-height: 20px;
+          }
         }
       }
-      .copyright_email::before{
+      .copyright_email::before {
         left: -30px;
         top: 2px;
         position: absolute;
@@ -109,15 +145,89 @@
         background-image: url('../img/footer/mail.png');
       }
     }
-    div{
+    div {
       font-family: Roboto;
       font-style: normal;
       font-weight: normal;
       font-size: 18px;
       line-height: 21px;
 
-      color: #AAAAAA;
+      color: #aaaaaa;
+      @media (max-width: 767px) {
+        font-size: 16px;
+        line-height: 20px;
+        text-align: center;
+      }
     }
   }
 }
 
+.footer_flex-mobile {
+  margin-top: 24px;
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @media (min-width: 768px) {
+    display: none;
+  }
+  .footer_nav {
+    text-align: center;
+    h4 {
+      font-family: 'Exo 2';
+      font-style: normal;
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 32px;
+      color: #ffffff;
+    }
+    ul {
+      li {
+        a {
+          font-family: 'Exo 2';
+          font-style: normal;
+          font-weight: normal;
+          font-size: 18px;
+          line-height: 24px;
+          text-decoration: none;
+          color: #ffffff;
+        }
+        a:hover {
+          color: #ff0000;
+        }
+      }
+    }
+  }
+  .footer-phone__mobile {
+    font-family: 'Exo 2';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 32px;
+    text-align: center;
+    color: #ffffff;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    .footer_phone {
+      margin-top: 15px;
+    }
+  }
+
+  .footer_social__mobile {
+    h4 {
+      font-family: 'Exo 2';
+      font-style: normal;
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 32px;
+      text-align: center;
+      color: #ffffff;
+    }
+    .footer_social__mobile-links {
+      margin-top: 22px;
+      .nav_facebook_link {
+        margin: 0 40px;
+      }
+    }
+  }
+}

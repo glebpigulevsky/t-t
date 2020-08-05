@@ -1,78 +1,169 @@
 header {
-  background-size: cover;
   background-color: #7f7f7f;
 }
-header .header {
-  margin: 0 auto;
-  width: 1440px;
-  height: 830px;
-  background-position: 102% 2%;
-  background-repeat: no-repeat;
-  background-image: url(../img/header/tv.jpg);
+@media (max-width: 767px) {
+  header {
+    background-color: #1B1B1B;
+  }
 }
-header .header .nav {
+header .header__row {
+  height: 119px;
   display: flex;
   justify-content: space-between;
-  padding: 30px 103px 0px 103px;
+  align-items: center;
+  flex-basis: 400px;
 }
-header .header .nav .nav-logo {
-  border: 1px solid red;
-  position: relative;
+@media (max-width: 767px) {
+  header .header__row {
+    height: 65px;
+  }
+}
+header .header__row .header__logo-burger {
+  flex-grow: 15;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+header .header__row .header__logo-burger .header__menu-burger {
+  display: none;
+}
+@media (max-width: 767px) {
+  header .header__row .header__logo-burger .header__menu-burger {
+    display: block;
+  }
+}
+header .header__row .header__logo-burger .header__logo {
   width: 100px;
   height: 89px;
-  background-repeat: no-repeat;
   background-image: url(../img/header/logo.png);
 }
-header .header .nav .nav-contacts {
+@media (max-width: 1023px) {
+  header .header__row .header__logo-burger .header__logo {
+    height: 45px;
+    width: 80px;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}
+header .header__row .header__contacts {
+  flex-grow: 4;
+  flex-shrink: 2;
   display: flex;
   justify-content: space-between;
-  width: 820px;
 }
-header .header .nav .nav-contacts .nav-contacts_adress {
-  border: 1px solid red;
-  position: relative;
-  font-family: "Exo 2", sans-serif;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 24px;
-  line-height: 32px;
-  color: #FFFFFF;
+@media (max-width: 863px) {
+  header .header__row .header__contacts {
+    align-items: center;
+    justify-content: flex-end;
+  }
 }
-header .header .nav .nav-contacts .nav-contacts_adress::before {
-  left: -60px;
-  position: absolute;
-  content: "";
+@media (max-width: 767px) {
+  header .header__row .header__contacts {
+    display: none;
+  }
+}
+header .header__row .header__contacts .header__adress {
   background-image: url(../img/header/locat.png);
-  width: 39px;
-  height: 52px;
+  background-repeat: no-repeat;
+  padding-left: 65px;
+  background-position: 2% 60%;
+  width: 339px;
+  height: 56px;
+  font-family: "Exo 2";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  color: #FFFFFF;
 }
-header .header .nav .nav-contacts .nav-contacts_phone {
-  border: 1px solid red;
-  position: relative;
-  font-family: "Exo 2", sans-serif;
+@media (max-width: 863px) {
+  header .header__row .header__contacts .header__adress {
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+    width: 295px;
+    height: 45px;
+    background-size: contain;
+    padding-left: 55px;
+  }
+}
+header .header__row .header__contacts .header__phone {
+  width: 228px;
+  height: 61px;
+  padding-left: 68px;
+  background-image: url(../img/header/phone.png);
+  background-repeat: no-repeat;
+  background-position: 2% 60%;
+}
+@media (max-width: 863px) {
+  header .header__row .header__contacts .header__phone {
+    width: 196px;
+    height: 45px;
+    background-size: contain;
+    padding-left: 55px;
+  }
+}
+header .header__row .header__contacts .header__phone p {
+  font-family: "Exo 2";
   font-style: normal;
   font-weight: 600;
   font-size: 24px;
   line-height: 32px;
   color: #FFFFFF;
-  text-align: center;
 }
-header .header .nav .nav-contacts .nav-contacts_phone a {
-  text-decoration: underline;
-  cursor: pointer;
+@media (max-width: 863px) {
+  header .header__row .header__contacts .header__phone p {
+    font-size: 19px;
+    line-height: 21px;
+  }
 }
-header .header .nav .nav-contacts .nav-contacts_phone::before {
-  left: -65px;
-  position: absolute;
-  content: "";
-  background-image: url(../img/header/phone.png);
-  width: 52px;
-  height: 52px;
+header .header__row .header__contacts .header__phone a {
+  font-family: "Exo 2";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+  color: #FFFFFF;
 }
-header .header .header-main {
-  padding: 151px 103px;
+@media (max-width: 863px) {
+  header .header__row .header__contacts .header__phone a {
+    font-size: 19px;
+    line-height: 21px;
+  }
 }
-header .header .header-main p:first-child {
+
+.banner {
+  background-color: #7f7f7f;
+}
+@media (max-width: 768px) {
+  .banner .banner__mobile-padding {
+    padding-right: 0px;
+  }
+}
+.banner .banner-text {
+  background-image: url(../img/header/tv.jpg);
+  background-position: 20% 50%;
+  background-size: 112%;
+  background-repeat: no-repeat;
+  padding: 151px 0px 224px 0px;
+}
+@media (max-width: 1280px) {
+  .banner .banner-text {
+    padding: 10vw 0px 10vw 0px;
+  }
+}
+@media (max-width: 1024px) {
+  .banner .banner-text {
+    padding: 10vw 0px 10vw 0px;
+    background-size: 130%;
+    background-position: calc(-20vw) 50%;
+  }
+}
+@media (max-width: 768px) {
+  .banner .banner-text {
+    background-size: 140%;
+  }
+}
+.banner .banner-text .banner-text_1 {
   font-family: Roboto;
   font-style: italic;
   font-weight: 900;
@@ -80,24 +171,33 @@ header .header .header-main p:first-child {
   line-height: 84px;
   color: #FFFFFF;
 }
-header .header .header-main p:nth-child(2) {
+@media (max-width: 767px) {
+  .banner .banner-text .banner-text_1 {
+    font-size: 24px;
+    line-height: 28px;
+  }
+}
+.banner .banner-text .banner-text_2 {
+  margin-top: 20px;
   font-family: Roboto;
   font-style: normal;
   font-weight: 900;
-  font-size: 96px;
+  font-size: 95px;
   line-height: 112px;
   color: #FFFFFF;
 }
-header .header .header-main p:nth-child(2) span {
-  font-family: Roboto;
+@media (max-width: 767px) {
+  .banner .banner-text .banner-text_2 {
+    font-size: 34px;
+    line-height: 40px;
+  }
+}
+.banner .banner-text .banner-text_2 span {
   font-style: italic;
-  font-weight: 900;
-  font-size: 96px;
-  line-height: 112px;
   color: #DA1A1A;
 }
-header .header .header-main p:last-child {
-  margin-top: 37px;
+.banner .banner-text .banner-text_3 {
+  margin-top: 60px;
   font-family: Roboto;
   font-style: normal;
   font-weight: normal;
@@ -105,30 +205,23 @@ header .header .header-main p:last-child {
   line-height: 56px;
   color: #FFFFFF;
 }
-header .header .header-form {
-  position: absolute;
-  left: 52%;
-  top: 710px;
-  width: 520px;
-  height: 769px;
-  background: #FFFFFF;
-  box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.25);
-  z-index: 10;
+@media (max-width: 767px) {
+  .banner .banner-text .banner-text_3 {
+    font-size: 18px;
+    line-height: 21px;
+    margin-top: 20px;
+  }
 }
 
-.descr {
-  margin: 0 auto;
-  width: 1440px;
-  height: 586px;
+@media (max-width: 767px) {
+  .banner__form .container__banner__form-flex {
+    display: flex;
+    flex-direction: column-reverse;
+  }
 }
-.descr .descr-flex {
-  padding: 136px 155px 136px 190px;
-  display: flex;
-  justify-content: space-between;
-}
-.descr .descr-flex .descr-text {
+.banner__form .banner__form-text {
+  padding: 140px 0;
   width: 461px;
-  height: 310px;
   font-family: "Exo 2";
   font-style: normal;
   font-weight: normal;
@@ -136,73 +229,416 @@ header .header .header-form {
   line-height: 40px;
   color: #000000;
 }
-.descr .descr-flex .descr-text span {
+@media (max-width: 1024px) {
+  .banner__form .banner__form-text {
+    font-size: 23px;
+    line-height: 35px;
+    width: 46vw;
+  }
+}
+@media (max-width: 767px) {
+  .banner__form .banner__form-text {
+    padding: 20px 0 40px 0;
+    width: 100%;
+    font-size: 16px;
+    line-height: 21px;
+    margin: 0 auto;
+  }
+}
+.banner__form .banner__form-text span {
   font-style: italic;
-  font-weight: 600;
+  font-weight: bold;
 }
 
-.aboutUs {
+.banner__form-form {
+  position: absolute;
+  left: 55vw;
+  top: 773px;
+  width: 32vw;
+  height: auto;
+  background: #ffffff;
+  box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.25);
+  z-index: 10;
+  padding: 29px 30px;
+}
+@media (max-width: 767px) {
+  .banner__form-form {
+    position: static;
+    left: 0;
+    top: 0;
+    width: 260px;
+    margin-bottom: 40px;
+    margin: 40px auto 0px auto;
+  }
+}
+@media (min-width: 1441px) {
+  .banner__form-form {
+    width: 520px;
+  }
+}
+@media (max-width: 1280px) {
+  .banner__form-form {
+    top: 684px;
+  }
+}
+@media (max-width: 1024px) {
+  .banner__form-form {
+    top: 753px;
+    padding: 20px 20px;
+  }
+}
+.banner__form-form h3 {
+  font-family: "Exo 2";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 53px;
+  text-align: center;
+  color: #000000;
+}
+@media (max-width: 1024px) {
+  .banner__form-form h3 {
+    font-size: 28px;
+    line-height: 35px;
+  }
+}
+.banner__form-form p {
+  font-family: "Exo 2";
+  font-style: italic;
+  font-weight: 200;
+  font-size: 30px;
+  line-height: 40px;
+  text-align: center;
+  color: #000000;
+}
+@media (max-width: 1024px) {
+  .banner__form-form p {
+    font-size: 20px;
+    line-height: 33px;
+  }
+}
+.banner__form-form .form_area {
+  display: flex;
+  flex-direction: column;
+}
+.banner__form-form .form_area .addfile {
+  background-repeat: no-repeat;
+  background-position: 450px 8px;
+  background-image: url(../img/header/file.png);
+}
+.banner__form-form .form_area input:first-child {
+  margin-top: 51px;
+}
+@media (max-width: 767px) {
+  .banner__form-form .form_area input:first-child {
+    margin-top: 25px;
+  }
+}
+.banner__form-form .form_area textarea {
+  margin-top: 30px;
+  border-radius: 30px;
+  border: 1px solid #aaaaaa;
+  box-sizing: border-box;
+  padding-left: 30px;
+  padding-top: 30px;
+  font-family: "Exo 2";
+  font-style: normal;
+  font-weight: 100;
+  font-size: 24px;
+  line-height: 32px;
+  color: #aaaaaa;
+  height: 140px;
+  resize: none;
+}
+@media (max-width: 1024px) {
+  .banner__form-form .form_area textarea {
+    margin-top: 20px;
+  }
+}
+@media (max-width: 767px) {
+  .banner__form-form .form_area textarea {
+    height: 80px;
+    font-size: 16px;
+    padding-top: 6px;
+  }
+}
+.banner__form-form .form_area .inputButton {
+  padding-left: 0px;
+  padding-right: 0;
+  margin-top: 50px;
+  background: #da1a1a;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.25);
+  border-radius: 30px;
+  height: 70px;
+  font-family: "Exo 2";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 53px;
+  text-align: center;
+  color: #ffffff;
+}
+@media (max-width: 1440px) {
+  .banner__form-form .form_area .inputButton {
+    font-size: 2.5vw;
+  }
+}
+@media (max-width: 767px) {
+  .banner__form-form .form_area .inputButton {
+    font-size: 18px;
+    line-height: 31px;
+    height: 40px;
+    margin-top: 20px;
+  }
+}
+@media (max-width: 1024px) {
+  .banner__form-form .form_area .inputButton {
+    margin-top: 30px;
+  }
+}
+.banner__form-form .form_area input {
+  margin-top: 30px;
+  border: 1px solid #aaaaaa;
+  box-sizing: border-box;
+  border-radius: 30px;
+  height: 60px;
+  padding-left: 30px;
+  font-family: "Exo 2";
+  font-style: normal;
+  font-weight: 100;
+  font-size: 24px;
+  line-height: 32px;
+  color: #aaaaaa;
+}
+@media (max-width: 767px) {
+  .banner__form-form .form_area input {
+    height: 30px;
+    font-size: 16px;
+    line-height: 21px;
+    margin-top: 21px;
+  }
+}
+
+.example-2 .btn-tertiary {
+  position: relative;
+  padding-left: 30px;
+  color: #747474;
+  padding: 0;
+  line-height: 40px;
+  height: 60px;
+  margin: auto;
+  display: block;
+  border: 1px solid #aaaaaa;
+  border-radius: 30px;
+  font-family: "Exo 2";
+  font-style: normal;
+  font-weight: 100;
+  font-size: 24px;
+  line-height: 53px;
+}
+.example-2 .btn-tertiary span {
+  padding-left: 30px;
+}
+@media (max-width: 1440px) {
+  .example-2 .btn-tertiary {
+    font-size: 2.3vw;
+  }
+}
+@media (max-width: 767px) {
+  .example-2 .btn-tertiary {
+    font-size: 16px;
+    height: 30px;
+    line-height: 30px;
+  }
+}
+
+.btn-tertiary::after {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-image: url(../img/header/file.png);
+  right: 30px;
+  top: 10px;
+}
+@media (max-width: 767px) {
+  .btn-tertiary::after {
+    top: 3px;
+    width: 25px;
+    height: 25px;
+    background-size: cover;
+  }
+}
+
+.example-2 {
+  margin-top: 30px;
+}
+@media (max-width: 767px) {
+  .example-2 {
+    margin-top: 21px;
+  }
+}
+
+.example-2 .btn-tertiary:hover,
+.example-2 .btn-tertiary:focus {
+  color: #aaaaaa;
+  border-color: #aaaaaa;
+}
+
+.example-2 .input-file {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+
+.example-2 .input-file + .js-labelFile {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding: 0 10px;
+  cursor: pointer;
+}
+
+.about {
   background: rgba(0, 0, 0, 0.6);
   background-image: url(../img/about/bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
-
-.about {
-  width: 1440px;
-  height: 876px;
-  margin: 0 auto;
+@media (max-width: 767px) {
+  .about {
+    background: #ffffff;
+    background-image: none;
+  }
 }
-.about .about-text {
-  padding: 23px 102px 51px 102px;
+@media (max-width: 767px) {
+  .about .about__container--wpadding {
+    padding: 0 0;
+  }
 }
-.about .about-text h2 {
+@media (max-width: 767px) {
+  .about .about__flex-container {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
+.about .about__main-title--mobile {
   font-family: "Exo 2";
   font-style: normal;
   font-weight: bold;
-  font-size: 96px;
+  font-size: 6rem;
   line-height: 107px;
-  color: #FFFFFF;
+  color: #ffffff;
 }
-.about .about-text p {
+@media (max-width: 767px) {
+  .about .about__main-title--mobile {
+    text-align: center;
+    font-size: 30px;
+    display: none;
+  }
+}
+.about .about__text {
+  padding: 23px 0;
+}
+@media (max-width: 767px) {
+  .about .about__text {
+    padding: 0px 10px;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+.about .about__text p {
   padding-top: 50px;
   font-family: "Exo 2";
   font-style: normal;
   font-weight: normal;
   font-size: 24px;
   line-height: 32px;
-  color: #FFFFFF;
+  color: #ffffff;
 }
-.about .about-text p a {
-  color: #FFFFFF;
+.about .about__text p a {
   text-decoration: underline;
   font-weight: bold;
+  color: #ffffff;
 }
-.about .about-advantages {
-  padding: 0px 103px 50px 103px;
+@media (max-width: 767px) {
+  .about .about__text p {
+    font-size: 18px;
+    color: #000000;
+    padding-top: 20px;
+    line-height: 24px;
+  }
 }
-.about .about-advantages h3 {
+@media (max-width: 767px) {
+  .about .about__advantages {
+    background: rgba(0, 0, 0, 0.6);
+    background-image: url(../img/about/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+.about .about__advantages .about__advantages-title--mobile {
+  font-family: "Exo 2";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 40px;
+  text-align: center;
+  color: #ffffff;
+}
+@media (min-width: 768px) {
+  .about .about__advantages .about__advantages-title--mobile {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  .about .about__advantages h3 {
+    line-height: 40px;
+    margin-top: 14px;
+  }
+}
+.about .about__advantages h4 {
   text-align: center;
   font-family: Roboto;
   font-style: normal;
   font-weight: 900;
   font-size: 48px;
   line-height: 56px;
-  color: #FFFFFF;
+  color: #ffffff;
 }
-.about .about-advantages .about-advantages_blocks {
-  padding-top: 67px;
+@media (max-width: 767px) {
+  .about .about__advantages h4 {
+    display: none;
+  }
+}
+.about .about__advantages .about__advantages-blocks {
+  padding: 50px 0;
   display: grid;
   grid-template-areas: "a a a a";
+  justify-content: center;
+  grid-gap: 20px;
 }
-.about .about-advantages .about-advantages_blocks div {
+@media (max-width: 1280px) {
+  .about .about__advantages .about__advantages-blocks {
+    grid-template-areas: "a a" "a a";
+  }
+}
+@media (max-width: 767px) {
+  .about .about__advantages .about__advantages-blocks {
+    padding: 45px 0;
+  }
+}
+.about .about__advantages .about__advantages-blocks div {
   position: relative;
   padding-top: 68px;
   text-align: center;
   width: 290px;
   height: 184px;
   background: rgba(0, 0, 0, 0.8);
-  border: 0.5px solid #FFFFFF;
+  border: 0.5px solid #ffffff;
   box-sizing: border-box;
   border-radius: 5px;
   font-family: Roboto;
@@ -211,9 +647,19 @@ header .header .header-form {
   font-size: 24px;
   line-height: 28px;
   text-align: center;
-  color: #FFFFFF;
+  word-wrap: break-word;
+  color: #ffffff;
 }
-.about .about-advantages .about-advantages_blocks div::before {
+@media (max-width: 767px) {
+  .about .about__advantages .about__advantages-blocks div {
+    width: 140px;
+    font-size: 14px;
+    height: auto;
+    font-size: 14px;
+    line-height: 19px;
+  }
+}
+.about .about__advantages .about__advantages-blocks div::before {
   position: absolute;
   content: "";
   background-image: url("../img/about/flag.png");
@@ -221,18 +667,24 @@ header .header .header-form {
   width: 40px;
   height: 48px;
   top: 0px;
-  left: 125px;
+  left: 43%;
+}
+@media (max-width: 767px) {
+  .about .about__advantages .about__advantages-blocks div::before {
+    left: 36%;
+  }
 }
 
-.problem {
-  width: 1440px;
-  height: auto;
-  margin: 0 auto;
+.problems {
+  margin-top: 100px;
 }
-.problem .problem-div {
-  padding: 102px 102px 58px 102px;
+@media (max-width: 767px) {
+  .problems {
+    margin-top: 40px;
+  }
 }
-.problem .problem-div h2 {
+
+.problems__main-title--mobile {
   font-family: "Exo 2";
   font-style: normal;
   font-weight: bold;
@@ -240,7 +692,16 @@ header .header .header-form {
   line-height: 96px;
   color: #000000;
 }
-.problem .problem-div p {
+@media (max-width: 767px) {
+  .problems__main-title--mobile {
+    font-weight: 900;
+    font-size: 30px;
+    line-height: 40px;
+  }
+}
+
+.problems__text {
+  margin-top: 50px;
   font-family: "Exo 2";
   font-style: normal;
   font-weight: normal;
@@ -248,25 +709,21 @@ header .header .header-form {
   line-height: 32px;
   color: #000000;
 }
-.problem .problem-verticalline {
-  padding: 0px 103px 0px 103px;
+@media (max-width: 767px) {
+  .problems__text {
+    display: none;
+  }
 }
-.problem .problem-verticalline div {
-  position: relative;
-  height: 560px;
+
+.problem-verticalline {
+  margin-top: 70px;
 }
-.problem .problem-verticalline div img {
-  position: absolute;
-  width: 56%;
+@media (max-width: 767px) {
+  .problem-verticalline {
+    margin-top: 20px;
+  }
 }
-.problem .problem-verticalline div .problem-vert {
-  z-index: 2;
-  top: 50px;
-}
-.problem .problem-verticalline div .problem-hor {
-  left: 520px;
-}
-.problem h3 {
+.problem-verticalline h3 {
   padding-bottom: 50px;
   font-family: "Exo 2";
   font-style: normal;
@@ -275,72 +732,125 @@ header .header .header-form {
   line-height: 64px;
   color: #000000;
 }
-.problem .problem-blinking {
-  padding: 0px 103px 0 103px;
+@media (max-width: 767px) {
+  .problem-verticalline h3 {
+    font-size: 18px;
+    line-height: 21px;
+    padding-bottom: 20px;
+  }
 }
-.problem .problem-blinking .problem-blinking_box {
-  margin-bottom: 100px;
-  position: relative;
-  height: 450px;
-}
-.problem .problem-blinking .problem-blinking_box .problem-blackscreen {
-  position: absolute;
-  z-index: 2;
-  top: 50px;
-}
-.problem .problem-blinking .problem-blinking_box .problem-blackscreen img {
-  width: 64%;
-}
-.problem .problem-blinking .problem-blinking_box .problem-blinkscreen {
-  position: absolute;
-  width: 56%;
-  height: 440px;
-  left: 520px;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-image: url(../img/problems/tvbox.png);
-}
-.problem .problem-blinking .problem-blinking_box .problem-blinkscreen .problem-blinkscreen_apple {
-  top: 9px;
-  left: 9px;
-  position: absolute;
-  width: 673px;
-  height: 379px;
-  overflow: hidden;
-}
-.problem .problem-blinking .problem-blinking_box .problem-blinkscreen .problem-blinkscreen_apple img {
-  position: relative;
-  top: -269px;
+.problem-verticalline .problem-line__img .problem-group__line-pcscreen {
   width: 100%;
 }
-.problem .problem-blinking .blinking-text {
-  padding: 0px 103px 0px 103px;
+@media (max-width: 767px) {
+  .problem-verticalline .problem-line__img .problem-group__line-pcscreen {
+    display: none;
+  }
+}
+.problem-verticalline .problem-line__img .problem-vert,
+.problem-verticalline .problem-line__img .problem-hor {
+  display: none;
+}
+@media (max-width: 767px) {
+  .problem-verticalline .problem-line__img .problem-vert,
+.problem-verticalline .problem-line__img .problem-hor {
+    display: block;
+    width: 100%;
+    margin-bottom: 22px;
+  }
+}
+
+.problem-blinking h3 {
+  padding-top: 84px;
+  padding-bottom: 50px;
   font-family: "Exo 2";
   font-style: normal;
-  font-weight: normal;
-  font-size: 24px;
-  line-height: 32px;
-  color: #000000;
-}
-.problem .problem-blinking .bolder {
-  margin-top: 50px;
-  font-weight: bold;
-  font-size: 30px;
-  line-height: 40px;
-}
-.problem .problem-structure {
-  margin-top: 70px;
-  padding: 0 103px 0 103px;
-}
-.problem .problem-structure h3 {
-  font-family: "Exo 2";
-  font-style: normal;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 48px;
   line-height: 64px;
   color: #000000;
 }
-.problem .problem-structure p {
+@media (max-width: 767px) {
+  .problem-blinking h3 {
+    font-size: 18px;
+    line-height: 21px;
+    padding-bottom: 20px;
+    padding-top: 22px;
+  }
+}
+.problem-blinking .blinking-text {
+  font-family: "Exo 2";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 32px;
+  color: #000000;
+  margin-bottom: 50px;
+}
+.problem-blinking .bolder {
+  font-weight: bold;
+  margin-bottom: 0px;
+}
+.problem-blinking .problem-blackscreen {
+  display: none;
+}
+@media (max-width: 767px) {
+  .problem-blinking .problem-blackscreen {
+    display: block;
+    width: 100%;
+    margin-bottom: 22px;
+  }
+}
+.problem-blinking .problem-blinkscreen_apple {
+  display: none;
+}
+@media (max-width: 767px) {
+  .problem-blinking .problem-blinkscreen_apple {
+    display: block;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(../img/problems/tvbox.png);
+    padding-bottom: 64%;
+    position: relative;
+  }
+  .problem-blinking .problem-blinkscreen_apple div {
+    top: 2%;
+    left: 1.3%;
+    position: absolute;
+    width: 97.4%;
+    height: 86%;
+    overflow: hidden;
+  }
+  .problem-blinking .problem-blinkscreen_apple div img {
+    width: 100%;
+    top: -73%;
+    position: relative;
+  }
+}
+
+.lcd-structure h3 {
+  padding-top: 70px;
+  padding-bottom: 50px;
+  font-family: "Exo 2";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 64px;
+  color: #000000;
+}
+@media (max-width: 767px) {
+  .lcd-structure h3 {
+    font-style: normal;
+    font-weight: 900;
+    font-size: 30px;
+    line-height: 40px;
+    color: #000000;
+    padding-top: 30px;
+    padding-bottom: 21px;
+  }
+}
+.lcd-structure p {
   font-family: "Exo 2";
   font-style: normal;
   font-weight: normal;
@@ -348,17 +858,42 @@ header .header .header-form {
   line-height: 32px;
   color: #000000;
 }
+@media (max-width: 767px) {
+  .lcd-structure p {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
+.lcd-structure .lcd-structure__screen,
+.lcd-structure .lcd-structure__mobile {
+  width: 100%;
+}
+@media (max-width: 767px) {
+  .lcd-structure .lcd-structure__screen {
+    display: none;
+  }
+}
+.lcd-structure .lcd-structure__mobile {
+  margin-top: 26px;
+  display: none;
+}
+@media (max-width: 767px) {
+  .lcd-structure .lcd-structure__mobile {
+    display: block;
+  }
+}
 
 .gallery {
-  background: rgba(0, 0, 0, 0.6);
   background-image: url(../img/work/bg.png);
   background-size: cover;
   background-repeat: no-repeat;
 }
 .gallery .carousel {
-  width: 1440px;
-  height: 748px;
-  margin: 0 auto;
+  width: 100%;
+  padding-bottom: 12%;
+  background: rgba(0, 0, 0, 0.6);
 }
 .gallery .carousel h3 {
   font-family: "Exo 2";
@@ -367,18 +902,51 @@ header .header .header-form {
   font-size: 72px;
   line-height: 96px;
   text-align: center;
-  color: #FFFFFF;
+  color: #ffffff;
+}
+@media (max-width: 767px) {
+  .gallery .carousel h3 {
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 40px;
+    text-align: center;
+  }
+}
+.gallery .carousel .carousel_video {
+  width: 100%;
+  margin: 0 20px;
+  display: flex;
+  justify-content: center;
+  margin-top: 68px;
+}
+@media (max-width: 768px) {
+  .gallery .carousel .carousel_video {
+    display: none;
+  }
+}
+.gallery .carousel .carousel_video_mobile {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+@media (min-width: 767px) {
+  .gallery .carousel .carousel_video_mobile {
+    display: none;
+  }
 }
 
 .price {
   margin-top: 100px;
-}
-.price .price-text {
-  width: 1235px;
+  width: 100%;
   height: auto;
-  margin: 0 auto;
 }
-.price .price-text h3 {
+@media (max-width: 767px) {
+  .price {
+    margin-top: 40px;
+  }
+}
+.price h3 {
   font-family: "Exo 2";
   font-style: normal;
   font-weight: 600;
@@ -387,7 +955,15 @@ header .header .header-form {
   text-align: center;
   color: #000000;
 }
-.price .price-text p {
+@media (max-width: 767px) {
+  .price h3 {
+    font-style: normal;
+    font-size: 30px;
+    line-height: 40px;
+    text-align: center;
+  }
+}
+.price p {
   margin-top: 76px;
   font-family: "Exo 2";
   font-style: normal;
@@ -395,18 +971,277 @@ header .header .header-form {
   font-size: 30px;
   line-height: 40px;
   color: #000000;
+  text-align: left;
 }
-.price .price-text .price-flex {
+@media (max-width: 767px) {
+  .price p {
+    margin-top: 20px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
+.price .price-flex {
+  width: 100%;
   margin-top: 47px;
   display: flex;
+  justify-content: space-around;
+}
+@media (max-width: 767px) {
+  .price .price-flex .price-flex-tv__img {
+    display: none;
+  }
+}
+.price .price-flex img {
+  width: 100%;
 }
 
-.contacts {
-  width: 100%;
+.footer {
+  background: #1b1b1b;
+}
+.footer .footer_flex {
+  padding: 0 60px 0 60px;
   margin: 0 auto;
+  height: 276px;
+  background: #1b1b1b;
+  margin-top: 57px;
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 1280px) {
+  .footer .footer_flex {
+    padding: 0 20px;
+  }
+}
+@media (max-width: 767px) {
+  .footer .footer_flex {
+    display: none;
+  }
+}
+.footer .footer_flex .footer_nav {
+  flex-shrink: 1;
+}
+.footer .footer_flex .footer_nav h4 {
+  font-family: "Exo 2";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+  color: #ffffff;
+}
+.footer .footer_flex .footer_nav ul li a {
+  font-family: "Exo 2";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+  text-decoration: none;
+  color: #ffffff;
+}
+.footer .footer_flex .footer_nav ul li a:hover {
+  color: #ff0000;
+}
+.footer .footer_flex .footer_phone {
+  margin-top: 30px;
+  font-family: "Exo 2";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 40px;
+  margin-left: 60px;
+  color: #ffffff;
   position: relative;
 }
-.contacts .contacts_text h3 {
+@media (max-width: 1080px) {
+  .footer .footer_flex .footer_phone {
+    margin-left: 0px;
+    font-size: 24px;
+  }
+}
+.footer .footer_flex .footer_phone::after {
+  position: absolute;
+  content: "";
+  width: 50px;
+  height: 50px;
+  background-image: url(../img/footer/telegram.png);
+  left: -65px;
+}
+@media (max-width: 1080px) {
+  .footer .footer_flex .footer_phone::after {
+    display: none;
+  }
+}
+.footer .footer_flex .footer_phone::before {
+  position: absolute;
+  content: "";
+  width: 50px;
+  height: 50px;
+  background-image: url(../img/footer/viber.png);
+  left: -130px;
+}
+@media (max-width: 1080px) {
+  .footer .footer_flex .footer_phone::before {
+    display: none;
+  }
+}
+.footer .footer_flex .footer_social {
+  display: flex;
+  justify-content: space-between;
+  width: auto;
+  height: 254px;
+  align-items: center;
+}
+.footer .footer_flex .footer_social .nav_facebook_link {
+  margin: 0 40px;
+}
+@media (max-width: 1080px) {
+  .footer .footer_flex .footer_social .nav_facebook_link {
+    margin: 0 10px;
+  }
+}
+.footer .footer_flex .footer_logo {
+  text-align: center;
+}
+.footer .footer_copyright {
+  width: 100%;
+  height: auto;
+  border-top: 1px solid #aaaaaa;
+  background-color: #1b1b1b;
+}
+.footer .footer_copyright .copyright_flex {
+  padding-top: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 945px) {
+  .footer .footer_copyright .copyright_flex {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.footer .footer_copyright .copyright_flex .copyright_email {
+  position: relative;
+}
+@media (max-width: 945px) {
+  .footer .footer_copyright .copyright_flex .copyright_email {
+    margin: 20px 0 25px 0;
+    text-align: center;
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+.footer .footer_copyright .copyright_flex .copyright_email a {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21px;
+  color: #aaaaaa;
+  text-decoration: none;
+}
+@media (max-width: 945px) {
+  .footer .footer_copyright .copyright_flex .copyright_email a {
+    text-align: center;
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+.footer .footer_copyright .copyright_flex .copyright_email::before {
+  left: -30px;
+  top: 2px;
+  position: absolute;
+  content: "";
+  width: 20px;
+  height: 16px;
+  background-image: url("../img/footer/mail.png");
+}
+.footer .footer_copyright div {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21px;
+  color: #aaaaaa;
+}
+@media (max-width: 767px) {
+  .footer .footer_copyright div {
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+  }
+}
+
+.footer_flex-mobile {
+  margin-top: 24px;
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  .footer_flex-mobile {
+    display: none;
+  }
+}
+.footer_flex-mobile .footer_nav {
+  text-align: center;
+}
+.footer_flex-mobile .footer_nav h4 {
+  font-family: "Exo 2";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+  color: #ffffff;
+}
+.footer_flex-mobile .footer_nav ul li a {
+  font-family: "Exo 2";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+  text-decoration: none;
+  color: #ffffff;
+}
+.footer_flex-mobile .footer_nav ul li a:hover {
+  color: #ff0000;
+}
+.footer_flex-mobile .footer-phone__mobile {
+  font-family: "Exo 2";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+  text-align: center;
+  color: #ffffff;
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+.footer_flex-mobile .footer-phone__mobile .footer_phone {
+  margin-top: 15px;
+}
+.footer_flex-mobile .footer_social__mobile h4 {
+  font-family: "Exo 2";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+  text-align: center;
+  color: #ffffff;
+}
+.footer_flex-mobile .footer_social__mobile .footer_social__mobile-links {
+  margin-top: 22px;
+}
+.footer_flex-mobile .footer_social__mobile .footer_social__mobile-links .nav_facebook_link {
+  margin: 0 40px;
+}
+
+.contact {
+  width: 100%;
+  margin-bottom: 100px;
+}
+.contact .contact_header {
   font-family: "Exo 2";
   font-style: normal;
   font-weight: 600;
@@ -415,29 +1250,50 @@ header .header .header-form {
   text-align: center;
   color: #000000;
 }
-.contacts .contacts_text .contacts_text-addr {
-  margin: 50px auto 0px auto;
-  display: flex;
-  width: 1150px;
-  height: 52px;
-  justify-content: space-between;
+@media (max-width: 767px) {
+  .contact .contact_header {
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 40px;
+    text-align: center;
+    margin-top: 40px;
+  }
 }
-.contacts .contacts_text .contacts_text-addr p {
+.contact .contact_header .contact_contacts {
+  padding: 0 60px 0 60px;
+  display: flex;
+  justify-content: space-around;
   font-family: "Exo 2";
   font-style: normal;
   font-weight: 600;
   font-size: 24px;
   line-height: 32px;
-  color: #000000;
+  margin-top: 50px;
+  margin-bottom: 78px;
 }
-.contacts .contacts_text .contacts_text-addr p span {
-  font-style: italic;
-  font-weight: 400;
+@media (max-width: 1240px) {
+  .contact .contact_header .contact_contacts {
+    padding: 0 20px 0 20px;
+  }
 }
-.contacts .contacts_text .contacts_text-addr .contacts_adress {
+@media (max-width: 1040px) {
+  .contact .contact_header .contact_contacts {
+    flex-direction: column;
+    align-items: center;
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
+@media (max-width: 767px) {
+  .contact .contact_header .contact_contacts {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}
+.contact .contact_header .contact_contacts .contact_contacts-adress {
   position: relative;
 }
-.contacts .contacts_text .contacts_text-addr .contacts_adress::before {
+.contact .contact_header .contact_contacts .contact_contacts-adress::before {
   content: "";
   position: absolute;
   background-image: url(../img/header/locat.png);
@@ -447,150 +1303,296 @@ header .header .header-form {
   left: -47px;
   top: -25px;
 }
-.contacts .contacts_text .contacts_text-addr .contacts_time {
+@media (max-width: 1040px) {
+  .contact .contact_header .contact_contacts .contact_contacts-adress::before {
+    display: none;
+  }
+}
+.contact .contact_header .contact_contacts .contact_contacts-time {
   position: relative;
 }
-.contacts .contacts_text .contacts_text-addr .contacts_time::before {
+@media (max-width: 1040px) {
+  .contact .contact_header .contact_contacts .contact_contacts-time {
+    margin-top: 10px;
+  }
+}
+.contact .contact_header .contact_contacts .contact_contacts-time::before {
   content: "";
   position: absolute;
   background-image: url(../img/contacts/watch.png);
   width: 52px;
   height: 52px;
   background-repeat: no-repeat;
-  left: -80px;
+  left: -66px;
   top: -20px;
 }
-.contacts .contacts_map {
-  width: 100%;
-  height: 796px;
-  border: 1px solid red;
-}
-.contacts .contacts_form {
-  position: absolute;
-  width: 350px;
-  height: 495px;
-  top: 300px;
-  left: 940px;
-  background: #FFFFFF;
-  box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.25);
-  z-index: 2;
+@media (max-width: 1040px) {
+  .contact .contact_header .contact_contacts .contact_contacts-time::before {
+    display: none;
+  }
 }
 
-.foot {
-  background: #1B1B1B;
+.contacts_form_mobile {
+  width: 300px;
+  height: 448px;
+  margin: 0px auto;
+  background: #ffffff;
+  box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.25);
+  z-index: 2;
+  margin-top: 40px;
 }
-.foot .footer {
-  margin: 0 auto;
-  width: 1234px;
-  height: 276px;
-  background: #1B1B1B;
-  padding: 78px 103px 0px 103px;
-  display: flex;
-  justify-content: space-between;
+@media (min-width: 941px) {
+  .contacts_form_mobile {
+    display: none;
+  }
 }
-.foot .footer .footer_nav h4 {
+.contacts_form_mobile form {
+  padding: 20px;
+}
+.contacts_form_mobile form h3 {
   font-family: "Exo 2";
-  font-style: normal;
+  font-style: italic;
   font-weight: 600;
   font-size: 24px;
   line-height: 32px;
-  color: #FFFFFF;
+  color: #000000;
+  text-align: center;
 }
-.foot .footer .footer_nav ul li a {
+.contacts_form_mobile form p {
   font-family: "Exo 2";
-  font-style: normal;
+  font-style: italic;
   font-weight: normal;
   font-size: 18px;
   line-height: 24px;
-  text-decoration: none;
-  color: #FFFFFF;
+  text-align: center;
+  color: #000000;
 }
-.foot .footer .footer_nav ul li a:hover {
-  color: #FF0000;
+.contacts_form_mobile form .form_area {
+  display: flex;
+  flex-direction: column;
 }
-.foot .footer .footer_phone {
-  margin-top: 30px;
+.contacts_form_mobile form .form_area input:first-child {
+  margin-top: 20px;
+}
+.contacts_form_mobile form .form_area textarea {
+  margin-top: 16px;
+  border-radius: 30px;
+  border: 1px solid #aaaaaa;
+  box-sizing: border-box;
+  padding-left: 24px;
+  padding-top: 24px;
+  font-family: "Exo 2";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 21px;
+  color: #aaaaaa;
+  height: 80px;
+  resize: none;
+}
+.contacts_form_mobile form .form_area .input_button-contacts {
+  margin-top: 20px;
+  background: #da1a1a;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.25);
+  border-radius: 30px;
+  height: 40px;
   font-family: "Exo 2";
   font-style: normal;
   font-weight: 600;
+  font-size: 18px;
+  line-height: 24px;
+  text-align: center;
+  color: #ffffff;
+}
+.contacts_form_mobile form .form_area input {
+  margin-top: 15px;
+  border: 1px solid #aaaaaa;
+  box-sizing: border-box;
+  border-radius: 30px;
+  height: 30px;
+  padding-left: 24px;
+  font-family: "Exo 2";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 21px;
+  color: #aaaaaa;
+}
+
+.contact_map-form {
+  position: relative;
+  height: 796px;
+}
+.contact_map-form #map {
+  width: 100%;
+  height: 796px;
+}
+.contact_map-form .contacts_form {
+  position: absolute;
+  top: 25%;
+  left: 62vw;
+  width: 350px;
+  height: 495px;
+  background: #ffffff;
+  box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.25);
+  z-index: 2;
+  padding: 30px;
+}
+@media (max-width: 1240px) {
+  .contact_map-form .contacts_form {
+    left: 52vw;
+  }
+}
+@media (max-width: 940px) {
+  .contact_map-form .contacts_form {
+    display: none;
+  }
+}
+.contact_map-form .contacts_form h3 {
+  font-family: "Exo 2";
+  font-style: italic;
+  font-weight: 600;
   font-size: 30px;
   line-height: 40px;
-  margin-left: 60px;
-  color: #FFFFFF;
-  position: relative;
+  color: #000000;
 }
-.foot .footer .footer_phone::after {
-  position: absolute;
-  content: "";
-  width: 50px;
-  height: 50px;
-  background-image: url(../img/footer/telegram.png);
-  left: -65px;
-}
-.foot .footer .footer_phone::before {
-  position: absolute;
-  content: "";
-  width: 50px;
-  height: 50px;
-  background-image: url(../img/footer/viber.png);
-  left: -130px;
-}
-.foot .footer .footer_social {
-  display: flex;
-  justify-content: space-between;
-  width: 260px;
-  height: 254px;
-  align-items: center;
-}
-.foot .footer .footer_logo {
+.contact_map-form .contacts_form p {
+  font-family: "Exo 2";
+  font-style: italic;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
   text-align: center;
+  color: #000000;
 }
-.foot .footer_copyright {
-  width: 1400px;
-  height: 32px;
-  border-top: 1px solid #aaaaaa;
-  background-color: #1B1B1B;
-  margin: 0 auto;
-}
-.foot .footer_copyright .copyright_flex {
-  padding-top: 5px;
+.contact_map-form .contacts_form .form_area {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
 }
-.foot .footer_copyright .copyright_flex .copyright_email {
+.contact_map-form .contacts_form .form_area input:first-child {
+  margin-top: 40px;
+}
+.contact_map-form .contacts_form .form_area textarea {
+  margin-top: 15px;
+  border-radius: 30px;
+  border: 1px solid #aaaaaa;
+  box-sizing: border-box;
+  padding-left: 24px;
+  padding-top: 24px;
+  font-family: "Exo 2";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 21px;
+  color: #aaaaaa;
+  height: 140px;
+  resize: none;
+}
+.contact_map-form .contacts_form .form_area .input_button-contacts {
+  margin-top: 20px;
+  background: #da1a1a;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.25);
+  border-radius: 30px;
+  height: 40px;
+  font-family: "Exo 2";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 24px;
+  text-align: center;
+  color: #ffffff;
+}
+.contact_map-form .contacts_form .form_area input {
+  margin-top: 15px;
+  border: 1px solid #aaaaaa;
+  box-sizing: border-box;
+  border-radius: 30px;
+  height: 40px;
+  padding-left: 24px;
+  font-family: "Exo 2";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 21px;
+  color: #aaaaaa;
+}
+
+.example-3 .btn-tertiary_contacts {
   position: relative;
-}
-.foot .footer_copyright .copyright_flex .copyright_email a {
-  font-family: Roboto;
+  padding-left: 30px;
+  color: #747474;
+  padding: 0;
+  line-height: 40px;
+  height: 40px;
+  margin: auto;
+  display: block;
+  border: 1px solid #aaaaaa;
+  border-radius: 30px;
+  font-family: "Exo 2";
   font-style: normal;
   font-weight: normal;
-  font-size: 18px;
-  line-height: 21px;
-  color: #AAAAAA;
-  text-decoration: none;
+  font-size: 16px;
 }
-.foot .footer_copyright .copyright_flex .copyright_email::before {
-  left: -30px;
-  top: 2px;
-  position: absolute;
+.example-3 .btn-tertiary_contacts span {
+  padding-left: 30px;
+}
+
+.example-3 .btn-tertiary_contacts::after {
   content: "";
-  width: 20px;
-  height: 16px;
-  background-image: url("../img/footer/mail.png");
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  background-image: url(../img/header/file.png);
+  background-size: cover;
+  right: 30px;
+  top: 9px;
 }
-.foot .footer_copyright div {
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 18px;
-  line-height: 21px;
-  color: #AAAAAA;
+
+.example-3 {
+  margin-top: 15px;
+}
+
+.example-3 .input-file {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
 }
 
 .container {
-  width: 100%;
+  max-width: 1240px;
   height: auto;
   overflow-x: hidden;
+  margin: 0 auto;
+  padding: 0px 100px;
+}
+@media (max-width: 1440px) {
+  .container {
+    padding: 0px 40px;
+  }
+}
+@media (max-width: 767px) {
+  .container {
+    padding: 0px 10px;
+  }
+}
+
+.container__footer {
+  max-width: 100%;
+  padding: 0 20px;
+}
+
+.wrapper {
+  display: flex;
+  min-height: 100%;
+  overflow: hidden;
+  flex-direction: column;
+}
+
+.border-red {
+  border: 1px solid red;
 }
 
 /*# sourceMappingURL=style.css.map */

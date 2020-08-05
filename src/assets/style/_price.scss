@@ -1,32 +1,56 @@
-.price{
+.price {
   margin-top: 100px;
-  .price-text{
-    h3{
-      
-      font-family: 'Exo 2';
+  @media (max-width: 767px) {
+    margin-top: 40px;
+  }
+  h3 {
+    font-family: 'Exo 2';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 72px;
+    line-height: 96px;
+    text-align: center;
+    color: #000000;
+    @media (max-width: 767px) {
       font-style: normal;
-      font-weight: 600;
-      font-size: 72px;
-      line-height: 96px;
-      text-align: center;
-      color: #000000;
-    }
-    p{
-      margin-top: 76px;
-      font-family: 'Exo 2';
-      font-style: normal;
-      font-weight: 600;
+
       font-size: 30px;
       line-height: 40px;
-      color: #000000;
+      text-align: center;
     }
-    width: 1235px;
-    height: auto;
-    margin: 0 auto;
-    .price-flex{
-      margin-top: 47px;
-      display: flex;
-      
+  }
+  p {
+    margin-top: 76px;
+    font-family: 'Exo 2';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 40px;
+    color: #000000;
+    text-align: left;
+    @media (max-width: 767px) {
+      margin-top: 20px;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 24px;
+    }
+  }
+  width: 100%;
+  height: auto;
+
+  .price-flex {
+    width: 100%;
+    margin-top: 47px;
+    display: flex;
+    justify-content: space-around;
+    .price-flex-tv__img {
+      @media (max-width: 767px) {
+        display: none;
+      }
+    }
+    img {
+      width: 100%;
     }
   }
 }

@@ -1,128 +1,366 @@
 header{
-  
-    background-size: cover;
-    background-color: #7f7f7f;
-  
-  .header{
-    margin: 0 auto;
-    width: 1440px;
-    height: 830px;
-    background-position: 102% 2%;
-    background-repeat: no-repeat;
-    background-image: url(../img/header/tv.jpg);
-    
-    .nav{
+  background-color: #7f7f7f;
+  @media (max-width: 767px){
+    background-color: #1B1B1B;
+  }
+  .header__row{
+    height: 119px;
+    @media (max-width: 767px){
+      height: 65px;
+    }
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-basis: 400px;
+    .header__logo-burger{
+      flex-grow: 15;
+      align-items: center;
       display: flex;
       justify-content: space-between;
-      padding: 30px 103px 0px 103px;
-      .nav-logo{
-        border: 1px solid red;
-        position: relative;
-        width:100px;
+      .header__menu-burger{
+        display: none;
+        @media (max-width: 767px){
+          display: block;
+        }
+      }
+      .header__logo{
+        width: 100px;
         height: 89px;
-        background-repeat: no-repeat;
         background-image: url(../img/header/logo.png);
+
+        @media (max-width: 1023px){
+          height:  45px;
+          width: 80px;
+          background-size: contain;
+          background-repeat: no-repeat;
+        }
       }
       
-      .nav-contacts{
-        display: flex;
-        justify-content: space-between;
-        
-        width: 820px;
-    
-        .nav-contacts_adress{
-          border: 1px solid red;
-          position: relative;
-          font-family: 'Exo 2', sans-serif;
+    }
+    .header__contacts{
+      @media (max-width: 863px){
+        align-items: center;
+        justify-content: flex-end;
+      }
+      @media (max-width: 767px){
+        display: none;
+      }
+      flex-grow: 4;
+      flex-shrink: 2;
+      display: flex;
+      justify-content: space-between;
+      .header__adress{
+        background-image: url(../img/header/locat.png);
+        background-repeat: no-repeat;
+        padding-left: 65px;
+        background-position: 2% 60%;
+        width: 339px;
+        height: 56px;
+        font-family: 'Exo 2';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 1.5rem;
+        line-height: 2rem;
+        color: #FFFFFF;
+        @media (max-width: 863px){
+          font-size: 1.2rem;
+          line-height: 1.4rem;
+          width: 295px;
+          height: 45px;
+          background-size: contain;
+          padding-left: 55px;
+        }
+      }
+      .header__phone{
+        width: 228px;
+        height: 61px;
+        padding-left: 68px;
+        background-image: url(../img/header/phone.png);
+        background-repeat: no-repeat;
+        background-position: 2% 60%;
+        @media (max-width: 863px){
+          width: 196px;
+          height: 45px;
+          background-size: contain;
+          padding-left: 55px;
+        }
+        p{
+          font-family: 'Exo 2';
           font-style: normal;
           font-weight: 600;
           font-size: 24px;
           line-height: 32px;
-  
           color: #FFFFFF;
-        }
-        .nav-contacts_adress::before{
-          left: -60px;
-          position: absolute;
-          content: '';
-          background-image: url(../img/header/locat.png);
-          width: 39px;
-          height: 52px;
-        }
-    
-        .nav-contacts_phone{
-          border: 1px solid red;
-          position: relative;
-          font-family: 'Exo 2', sans-serif;
-          font-style: normal;
-          font-weight: 600;
-          font-size: 24px;
-          line-height: 32px;
-          color: #FFFFFF;
-          text-align: center;
-          a{
-            text-decoration: underline;
-            cursor: pointer;
+          @media (max-width: 863px){
+            font-size: 19px;
+            line-height: 21px;
           }
         }
-        .nav-contacts_phone::before{
-          left: -65px;
-          position: absolute;
-          content: '';
-          background-image: url(../img/header/phone.png);
-          width: 52px;
-          height: 52px;
+        a{
+          font-family: 'Exo 2';
+          font-style: normal;
+          font-weight: 600;
+          font-size: 24px;
+          line-height: 32px;
+          color: #FFFFFF;
+          @media (max-width: 863px){
+            font-size: 19px;
+            line-height: 21px;
+          }
         }
       }
-    }
-    .header-main{
-      padding: 151px 103px;
-       p:first-child{
-        font-family: Roboto;
-        font-style: italic;
-        font-weight: 900;
-        font-size: 72px;
-        line-height: 84px;
-        color: #FFFFFF;
-      }
-      p:nth-child(2){
-        font-family: Roboto;
-        font-style: normal;
-        font-weight: 900;
-        font-size: 96px;
-        line-height: 112px;
-        color: #FFFFFF;
-        span{
-          font-family: Roboto;
-          font-style: italic;
-          font-weight: 900;
-          font-size: 96px;
-          line-height: 112px;
-
-          color: #DA1A1A;
-        }
-      }
-      p:last-child{
-        margin-top: 37px;
-        font-family: Roboto;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 48px;
-        line-height: 56px;
-  
-        color: #FFFFFF;
-      }
-    }
-    .header-form{
-      position: absolute;
-      left: 52%;
-      top: 710px;
-      width: 520px;
-      height: 769px;
-      background: #FFFFFF;
-      box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.25);
-      z-index: 10;
     }
   }
 }
+
+
+
+
+// header{
+  
+//     background-size: cover;
+//     background-color: #7f7f7f;
+  
+//   .header{
+//     margin: 0 auto;
+//     width: 1440px;
+//     height: 830px;
+//     background-position: 102% 2%;
+//     background-repeat: no-repeat;
+//     background-image: url(../img/header/tv.jpg);
+    
+//     .nav{
+//       display: flex;
+//       justify-content: space-between;
+//       padding: 30px 103px 0px 103px;
+//       .nav-logo{
+//         border: 1px solid red;
+//         position: relative;
+//         width:100px;
+//         height: 89px;
+//         background-repeat: no-repeat;
+//         background-image: url(../img/header/logo.png);
+//       }
+      
+//       .nav-contacts{
+//         display: flex;
+//         justify-content: space-between;
+        
+//         width: 820px;
+    
+//         .nav-contacts_adress{
+//           border: 1px solid red;
+//           position: relative;
+//           font-family: 'Exo 2', sans-serif;
+//           font-style: normal;
+//           font-weight: 600;
+//           font-size: 24px;
+//           line-height: 32px;
+  
+//           color: #FFFFFF;
+//         }
+//         .nav-contacts_adress::before{
+//           left: -60px;
+//           position: absolute;
+//           content: '';
+//           background-image: url(../img/header/locat.png);
+//           width: 39px;
+//           height: 52px;
+//         }
+    
+//         .nav-contacts_phone{
+//           border: 1px solid red;
+//           position: relative;
+//           font-family: 'Exo 2', sans-serif;
+//           font-style: normal;
+//           font-weight: 600;
+//           font-size: 24px;
+//           line-height: 32px;
+//           color: #FFFFFF;
+//           text-align: center;
+//           a{
+//             text-decoration: underline;
+//             cursor: pointer;
+//           }
+//         }
+//         .nav-contacts_phone::before{
+//           left: -65px;
+//           position: absolute;
+//           content: '';
+//           background-image: url(../img/header/phone.png);
+//           width: 52px;
+//           height: 52px;
+//         }
+//       }
+//     }
+//     .header-main{
+//       padding: 151px 103px;
+//        p:first-child{
+//         font-family: Roboto;
+//         font-style: italic;
+//         font-weight: 900;
+//         font-size: 72px;
+//         line-height: 84px;
+//         color: #FFFFFF;
+//       }
+//       p:nth-child(2){
+//         font-family: Roboto;
+//         font-style: normal;
+//         font-weight: 900;
+//         font-size: 96px;
+//         line-height: 112px;
+//         color: #FFFFFF;
+//         span{
+//           font-family: Roboto;
+//           font-style: italic;
+//           font-weight: 900;
+//           font-size: 96px;
+//           line-height: 112px;
+
+//           color: #DA1A1A;
+//         }
+//       }
+//       p:last-child{
+//         margin-top: 37px;
+//         font-family: Roboto;
+//         font-style: normal;
+//         font-weight: normal;
+//         font-size: 48px;
+//         line-height: 56px;
+  
+//         color: #FFFFFF;
+//       }
+//     }
+//     .header-form{
+//       position: absolute;
+//       left: 52%;
+//       top: 710px;
+//       width: 520px;
+//       height: 750px;
+//       background: #FFFFFF;
+//       box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.25);
+//       z-index: 10;
+//       padding: 29px 30px;
+//       h3{
+//         font-family: 'Exo 2';
+//         font-style: normal;
+//         font-weight: 600;
+//         font-size: 40px;
+//         line-height: 53px;
+//         text-align: center;
+
+//         color: #000000;
+//       }
+//       p{
+//         font-family: 'Exo 2';
+//         font-style: italic;
+//         font-weight: 200;
+//         font-size: 30px;
+//         line-height: 40px;
+//         text-align: center;
+
+//         color: #000000;
+//       }
+//       .form_area{
+//         display: flex;
+//         flex-direction: column;
+//         .addfile{
+//           background-repeat: no-repeat;
+//           background-position: 450px 8px;
+//           background-image: url(../img/header/file.png);
+          
+//         }
+        
+//         input:first-child{
+//           margin-top: 51px;
+//         }
+//         textarea{
+//           margin-top: 30px;
+//           border-radius: 30px;
+//           border: 1px solid #AAAAAA;
+//           box-sizing: border-box;
+//           padding-left: 30px;
+//           padding-top: 30px;
+//           font-family: 'Exo 2';
+//           font-style: normal;
+//           font-weight: 600;
+//           font-size: 24px;
+//           line-height: 32px;
+//           color: #AAAAAA;
+//           height: 140px;
+//           resize:none;
+//         }
+//         .inputButton{
+//           margin-top: 50px;
+//           background: #DA1A1A;
+//           box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.25);
+//           border-radius: 30px;
+//           height: 70px;
+//           font-family: 'Exo 2';
+//           font-style: normal;
+//           font-weight: 600;
+//           font-size: 40px;
+//           line-height: 53px;
+//           text-align: center;
+//           color: #FFFFFF;
+//         }
+//         input{
+//           margin-top: 30px;
+//           border: 1px solid #AAAAAA;
+//           box-sizing: border-box;
+//           border-radius: 30px;
+//           height: 60px;
+//           padding-left: 30px;
+//           font-family: 'Exo 2';
+//           font-style: normal;
+//           font-weight: 600;
+//           font-size: 24px;
+//           line-height: 32px;
+
+//           color: #AAAAAA;
+
+//         }
+//       }
+//     }
+//   }
+// }
+
+// .example-2 .btn-tertiary{
+//   position: relative;
+//   padding-left: 30px;
+//   color: #747474;
+//   padding:0;
+//   line-height:40px;
+//   height: 60px;
+//   margin:auto;
+//   display:block;
+//   border: 1px solid #AAAAAA;
+//   border-radius: 30px;
+//   font-family: 'Exo 2';
+//   font-style: normal;
+//   font-weight: 600;
+//   font-size: 24px;
+//   line-height: 53px;
+//   span{
+//     padding-left: 30px;
+//   }
+// }
+// .btn-tertiary::after{
+//   content: '';
+//   position: absolute;
+//   width: 40px;
+//   height: 40px;
+//   background-image: url(../img/header/file.png);
+//   right:30px;
+//   top: 10px;
+// }
+// .example-2{
+//   margin-top: 30px;
+// }
+// .example-2 .btn-tertiary:hover,.example-2 .btn-tertiary:focus{
+//   color: #AAAAAA;border-color: #AAAAAA;}
+// .example-2{
+//   .input-file{width:.1px;height:.1px;opacity:0;overflow:hidden;position:absolute;z-index:-1}
+// } 
+// .example-2 .input-file + .js-labelFile{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;padding:0 10px;cursor:pointer}
 

@@ -1,22 +1,46 @@
-.gallery{
-  background: rgba(0, 0, 0, 0.6);
+.gallery {
   background-image: url(../img/work/bg.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-  .carousel{
-    
-    
-    width: 1440px;
-    height: 748px;
-    margin: 0 auto;
-    h3{
+  background-size: cover;
+  background-repeat: no-repeat;
+  .carousel {
+    width: 100%;
+    padding-bottom: 12%;
+    background: rgba(0, 0, 0, 0.6);
+    h3 {
       font-family: 'Exo 2';
       font-style: normal;
       font-weight: 600;
       font-size: 72px;
       line-height: 96px;
       text-align: center;
-      color: #FFFFFF;
+      color: #ffffff;
+      @media (max-width: 767px) {
+        font-weight: 600;
+        font-size: 30px;
+        line-height: 40px;
+        text-align: center;
+      }
+    }
+
+    .carousel_video {
+      width: 100%;
+      margin: 0 20px;
+      display: flex;
+      justify-content: center;
+      margin-top: 68px;
+      @media (max-width: 768px) {
+        display: none;
+      }
+    }
+    .carousel_video_mobile {
+      width: 100%;
+
+      display: flex;
+      justify-content: center;
+      margin-top: 50px;
+      @media (min-width: 767px) {
+        display: none;
+      }
     }
   }
 }

@@ -1,0 +1,71 @@
+.banner{
+  background-color: #7f7f7f;
+  .banner__mobile-padding{
+    @media (max-width: 768px){
+      padding-right: 0px;
+    }
+  }
+  .banner-text{
+    background-image: url(../img/header/tv.jpg);
+    background-position: 20% 50%;
+    background-size: 112%;
+    background-repeat: no-repeat;
+    padding: 151px 0px 224px 0px;
+    
+    @media (max-width: 1280px){
+      padding: 10vw 0px 10vw 0px;
+    }
+    @media (max-width: 1024px){
+      padding: 10vw 0px 10vw 0px;
+      background-size: 130%;
+      background-position: calc(-20vw) 50%;
+    }
+    @media (max-width: 768px){
+      
+      background-size: 140%;
+    }
+    .banner-text_1{
+      font-family: Roboto;
+      font-style: italic;
+      font-weight: 900;
+      font-size: 72px;
+      line-height: 84px;
+      color: #FFFFFF;
+      @media (max-width: 767px){
+        font-size: 24px;
+        line-height: 28px;
+      }
+    }
+    .banner-text_2{
+      margin-top: 20px;
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: 900;
+      font-size: 95px;
+      line-height: 112px;
+      color: #FFFFFF;
+      @media (max-width: 767px){
+        font-size: 34px;
+        line-height: 40px;
+      }
+      span{ 
+        font-style: italic;
+        color: #DA1A1A;
+      }
+    }
+    .banner-text_3{
+      margin-top: 60px;
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 48px;
+      line-height: 56px;
+      color: #FFFFFF;
+      @media (max-width: 767px){
+        font-size: 18px;
+        line-height: 21px;
+        margin-top: 20px;
+      }
+    }
+  }
+}

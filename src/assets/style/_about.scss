@@ -1,63 +1,125 @@
-.aboutUs{
+.about {
   background: rgba(0, 0, 0, 0.6);
   background-image: url(../img/about/bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-}
-.about{
-  
-  width: 1440px;
-  height: 876px;
-  margin: 0 auto;
-  
-  .about-text{
-    padding: 23px 102px 51px 102px ;
-    h2{
-      font-family: 'Exo 2';
-      font-style: normal;
-      font-weight: bold;
-      font-size: 96px;
-      line-height: 107px;
-      color: #FFFFFF;
+  @media (max-width: 767px) {
+    background: #ffffff;
+    background-image: none;
+  }
+  .about__container--wpadding {
+    @media (max-width: 767px) {
+      padding: 0 0;
     }
-    p{
+  }
+  .about__flex-container {
+    @media (max-width: 767px) {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+  }
+  .about__main-title--mobile {
+    font-family: 'Exo 2';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 6rem;
+    line-height: 107px;
+    color: #ffffff;
+    @media (max-width: 767px) {
+      text-align: center;
+      font-size: 30px;
+      display: none;
+    }
+  }
+  .about__text {
+    @media (max-width: 767px) {
+      padding: 0px 10px;
+      width: 100%;
+      margin: 0 auto;
+    }
+    padding: 23px 0;
+
+    p {
       padding-top: 50px;
       font-family: 'Exo 2';
       font-style: normal;
       font-weight: normal;
       font-size: 24px;
       line-height: 32px;
-      color: #FFFFFF;
-      a{
-        color: #FFFFFF;
+      color: #ffffff;
+      a {
         text-decoration: underline;
         font-weight: bold;
+        color: #ffffff;
+      }
+      @media (max-width: 767px) {
+        font-size: 18px;
+        color: #000000;
+        padding-top: 20px;
+        line-height: 24px;
       }
     }
   }
-  .about-advantages{
-    padding: 0px 103px 50px 103px;
-    h3{
+  .about__advantages {
+    @media (max-width: 767px) {
+      background: rgba(0, 0, 0, 0.6);
+      background-image: url(../img/about/bg.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    .about__advantages-title--mobile {
+      font-family: 'Exo 2';
+      font-style: normal;
+      font-weight: 600;
+      font-size: 30px;
+      line-height: 40px;
+      text-align: center;
+
+      color: #ffffff;
+      @media (min-width: 768px) {
+        display: none;
+      }
+    }
+    h3 {
+      @media (max-width: 768px) {
+        line-height: 40px;
+        margin-top: 14px;
+      }
+    }
+    h4 {
       text-align: center;
       font-family: Roboto;
       font-style: normal;
       font-weight: 900;
       font-size: 48px;
       line-height: 56px;
-      color: #FFFFFF;
+      color: #ffffff;
+      @media (max-width: 767px) {
+        display: none;
+      }
     }
-    .about-advantages_blocks{
-      padding-top: 67px;
+    .about__advantages-blocks {
+      padding: 50px 0;
       display: grid;
       grid-template-areas: 'a a a a';
-      div{
+      justify-content: center;
+      grid-gap: 20px;
+      @media (max-width: 1280px) {
+        grid-template-areas:
+          'a a'
+          'a a';
+      }
+      @media (max-width: 767px) {
+        padding: 45px 0;
+      }
+      div {
         position: relative;
         padding-top: 68px;
         text-align: center;
         width: 290px;
         height: 184px;
         background: rgba(0, 0, 0, 0.8);
-        border: 0.5px solid #FFFFFF;
+        border: 0.5px solid #ffffff;
         box-sizing: border-box;
         border-radius: 5px;
         font-family: Roboto;
@@ -66,9 +128,17 @@
         font-size: 24px;
         line-height: 28px;
         text-align: center;
-        color: #FFFFFF;
+        word-wrap: break-word;
+        color: #ffffff;
+        @media (max-width: 767px) {
+          width: 140px;
+          font-size: 14px;
+          height: auto;
+          font-size: 14px;
+          line-height: 19px;
+        }
       }
-      div::before{
+      div::before {
         position: absolute;
         content: '';
         background-image: url('../img/about/flag.png');
@@ -76,8 +146,97 @@
         width: 40px;
         height: 48px;
         top: 0px;
-        left:125px;
+        left: 43%;
+        @media (max-width: 767px) {
+          left: 36%;
+        }
       }
     }
   }
 }
+
+// .aboutUs{
+//   background: rgba(0, 0, 0, 0.6);
+//   background-image: url(../img/about/bg.jpg);
+//   background-repeat: no-repeat;
+//   background-size: cover;
+// }
+// .about{
+
+//   width: 1440px;
+//   height: 876px;
+//   margin: 0 auto;
+
+//   .about-text{
+//     padding: 23px 102px 51px 102px ;
+//     h2{
+//       font-family: 'Exo 2';
+//       font-style: normal;
+//       font-weight: bold;
+//       font-size: 6rem;
+//       line-height: 107px;
+//       color: #FFFFFF;
+//     }
+//     p{
+//       padding-top: 50px;
+//       font-family: 'Exo 2';
+//       font-style: normal;
+//       font-weight: normal;
+//       font-size: 24px;
+//       line-height: 32px;
+//       color: #FFFFFF;
+//       a{
+//         color: #FFFFFF;
+//         text-decoration: underline;
+//         font-weight: bold;
+//       }
+//     }
+//   }
+//   .about-advantages{
+//     padding: 0px 103px 50px 103px;
+//     h3{
+//       text-align: center;
+//       font-family: Roboto;
+//       font-style: normal;
+//       font-weight: 900;
+//       font-size: 48px;
+//       line-height: 56px;
+//       color: #FFFFFF;
+//     }
+//     .about-advantages_blocks{
+//       padding-top: 67px;
+//       display: grid;
+//       grid-template-areas: 'a a a a';
+//       justify-content: center;
+//       grid-gap: 20px;
+//       div{
+//         position: relative;
+//         padding-top: 68px;
+//         text-align: center;
+//         width: 290px;
+//         height: 184px;
+//         background: rgba(0, 0, 0, 0.8);
+//         border: 0.5px solid #FFFFFF;
+//         box-sizing: border-box;
+//         border-radius: 5px;
+//         font-family: Roboto;
+//         font-style: normal;
+//         font-weight: normal;
+//         font-size: 24px;
+//         line-height: 28px;
+//         text-align: center;
+//         color: #FFFFFF;
+//       }
+//       div::before{
+//         position: absolute;
+//         content: '';
+//         background-image: url('../img/about/flag.png');
+//         background-repeat: no-repeat;
+//         width: 40px;
+//         height: 48px;
+//         top: 0px;
+//         left:125px;
+//       }
+//     }
+//   }
+// }

@@ -1,49 +1,43 @@
-.problem{
-  
-  width: 1440px;
-  height: auto;
-  margin: 0 auto;
-  .problem-div{
-    padding: 102px 102px 58px 102px;
-    h2{
-      font-family: 'Exo 2';
-      font-style: normal;
-      font-weight: bold;
-      font-size: 72px;
-      line-height: 96px;
-      color: #000000;
-    }
-    p{
-      font-family: 'Exo 2';
-      font-style: normal;
-      font-weight: normal;
-      font-size: 24px;
-      line-height: 32px;
-  
-      color: #000000;
-    }
-    
+.problems {
+  margin-top: 100px;
+  @media (max-width: 767px) {
+    margin-top: 40px;
   }
-  .problem-verticalline{
-    padding: 0px 103px 0px 103px;
-    div{
-      position: relative;
-      height: 560px;
-      img{
-        position: absolute;
-        width: 56%;
-      }
-      .problem-vert{
-        z-index: 2;
-        top: 50px;
-      }
-      .problem-hor{
-        left: 520px;
-      }
-    }
+}
+.problems__main-title--mobile {
+  font-family: 'Exo 2';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 72px;
+  line-height: 96px;
+  color: #000000;
+  @media (max-width: 767px) {
+    font-weight: 900;
+    font-size: 30px;
+    line-height: 40px;
+  }
+}
+
+.problems__text {
+  margin-top: 50px;
+  font-family: 'Exo 2';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 32px;
+  color: #000000;
+  @media (max-width: 767px) {
+    display: none;
+  }
+}
+
+.problem-verticalline {
+  margin-top: 70px;
+  @media (max-width: 767px) {
+    margin-top: 20px;
   }
 
-  h3{
+  h3 {
     padding-bottom: 50px;
     font-family: 'Exo 2';
     font-style: normal;
@@ -51,79 +45,275 @@
     font-size: 48px;
     line-height: 64px;
     color: #000000;
-  }
-  .problem-blinking{
-    padding: 0px 103px 0 103px;
-    .problem-blinking_box{
-      margin-bottom: 100px;
-      position: relative;
-      height: 450px;
-      .problem-blackscreen{
-        position: absolute;
-        z-index: 2;
-        top: 50px;
-        img{
-          width: 64%;
-        }
-      }
-      .problem-blinkscreen{
-        
-        position: absolute;
-        width: 56%;
-        height: 440px;
-        left: 520px;
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-image: url(../img/problems/tvbox.png);
-        .problem-blinkscreen_apple{
-          top: 9px;
-          left: 9px;
-          position: absolute;
-          width: 673px;
-          height: 379px;
-          overflow: hidden;
-          img{
-            position: relative;
-            top: -269px;
-            width: 100%;
-          }
-        }
-      }
-    }
-    .blinking-text{
-      padding: 0px 103px 0px 103px;
-      font-family: 'Exo 2';
-      font-style: normal;
-      font-weight: normal;
-      font-size: 24px;
-      line-height: 32px;
-      color: #000000;
-    }
-    .bolder{
-      margin-top: 50px;
-      font-weight: bold;
-      font-size: 30px;
-      line-height: 40px;
+    @media (max-width: 767px) {
+      font-size: 18px;
+      line-height: 21px;
+      padding-bottom: 20px;
     }
   }
-  .problem-structure{
-    margin-top: 70px;
-    padding: 0 103px 0 103px;
-    h3{
-      font-family: 'Exo 2';
-      font-style: normal;
-      font-weight: 600;
-      font-size: 48px;
-      line-height: 64px;
-      color: #000000;
+  .problem-line__img {
+    .problem-group__line-pcscreen {
+      width: 100%;
+      @media (max-width: 767px) {
+        display: none;
+      }
     }
-    p{
-      font-family: 'Exo 2';
-      font-style: normal;
-      font-weight: normal;
-      font-size: 24px;
-      line-height: 32px;
-      color: #000000;
+    .problem-vert,
+    .problem-hor {
+      display: none;
+      @media (max-width: 767px) {
+        display: block;
+        width: 100%;
+        margin-bottom: 22px;
+      }
     }
   }
 }
+
+.problem-blinking {
+  h3 {
+    padding-top: 84px;
+    padding-bottom: 50px;
+    font-family: 'Exo 2';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 64px;
+    color: #000000;
+    @media (max-width: 767px) {
+      font-size: 18px;
+      line-height: 21px;
+      padding-bottom: 20px;
+      padding-top: 22px;
+    }
+  }
+  .blinking-text {
+    font-family: 'Exo 2';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 32px;
+
+    color: #000000;
+    margin-bottom: 50px;
+  }
+  .bolder {
+    font-weight: bold;
+    margin-bottom: 0px;
+  }
+
+  .problem-blackscreen {
+    display: none;
+    @media (max-width: 767px) {
+      display: block;
+      width: 100%;
+      margin-bottom: 22px;
+    }
+  }
+  .problem-blinkscreen_apple {
+    display: none;
+    @media (max-width: 767px) {
+      display: block;
+      width: 100%;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-image: url(../img/problems/tvbox.png);
+      padding-bottom: 64%;
+      position: relative;
+      div {
+        top: 2%;
+        left: 1.3%;
+        position: absolute;
+        width: 97.4%;
+        height: 86%;
+        overflow: hidden;
+        img {
+          width: 100%;
+          top: -73%;
+          position: relative;
+        }
+      }
+    }
+  }
+}
+.lcd-structure {
+  h3 {
+    padding-top: 70px;
+    padding-bottom: 50px;
+    font-family: 'Exo 2';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 64px;
+    color: #000000;
+    @media (max-width: 767px) {
+      font-style: normal;
+      font-weight: 900;
+      font-size: 30px;
+      line-height: 40px;
+
+      color: #000000;
+      padding-top: 30px;
+      padding-bottom: 21px;
+    }
+  }
+  p {
+    font-family: 'Exo 2';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 32px;
+    color: #000000;
+    @media (max-width: 767px) {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 24px;
+    }
+  }
+  .lcd-structure__screen,
+  .lcd-structure__mobile {
+    width: 100%;
+  }
+  .lcd-structure__screen {
+    @media (max-width: 767px) {
+      display: none;
+    }
+  }
+  .lcd-structure__mobile {
+    margin-top: 26px;
+    display: none;
+    @media (max-width: 767px) {
+      display: block;
+    }
+  }
+}
+
+// .problem{
+//   width: 1440px;
+//   height: auto;
+//   margin: 0 auto;
+//   .problem-div{
+//     padding: 102px 102px 58px 102px;
+//     h2{
+//       font-family: 'Exo 2';
+//       font-style: normal;
+//       font-weight: bold;
+//       font-size: 72px;
+//       line-height: 96px;
+//       color: #000000;
+//     }
+//     p{
+//       font-family: 'Exo 2';
+//       font-style: normal;
+//       font-weight: normal;
+//       font-size: 24px;
+//       line-height: 32px;
+
+//       color: #000000;
+//     }
+
+//   }
+//   .problem-verticalline{
+//     padding: 0px 103px 0px 103px;
+//     div{
+//       position: relative;
+//       height: 560px;
+//       img{
+//         position: absolute;
+//         width: 56%;
+//       }
+//       .problem-vert{
+//         z-index: 2;
+//         top: 50px;
+//       }
+//       .problem-hor{
+//         left: 520px;
+//       }
+//     }
+//   }
+
+//   h3{
+//     padding-bottom: 50px;
+//     font-family: 'Exo 2';
+//     font-style: normal;
+//     font-weight: 500;
+//     font-size: 48px;
+//     line-height: 64px;
+//     color: #000000;
+//   }
+//   .problem-blinking{
+//     padding: 0px 103px 0 103px;
+//     .problem-blinking_box{
+//       margin-bottom: 100px;
+//       position: relative;
+//       height: 450px;
+//       .problem-blackscreen{
+//         position: absolute;
+//         z-index: 2;
+//         top: 50px;
+//         img{
+//           width: 64%;
+//         }
+//       }
+//       .problem-blinkscreen{
+
+//         position: absolute;
+//         width: 56%;
+//         height: 440px;
+//         left: 520px;
+//         background-size: cover;
+//         background-repeat: no-repeat;
+//         background-image: url(../img/problems/tvbox.png);
+//         .problem-blinkscreen_apple{
+//           top: 9px;
+//           left: 9px;
+//           position: absolute;
+//           width: 97.4%;
+//           height: 86.5%;
+//           overflow: hidden;
+//           img{
+//             position: relative;
+//             top: -269px;
+//             width: 100%;
+//           }
+//         }
+//       }
+//     }
+//     .blinking-text{
+
+//       font-family: 'Exo 2';
+//       font-style: normal;
+//       font-weight: normal;
+//       font-size: 24px;
+//       line-height: 32px;
+//       color: #000000;
+//     }
+//     .bolder{
+//       margin-top: 50px;
+//       font-weight: bold;
+//       font-size: 30px;
+//       line-height: 40px;
+//     }
+//   }
+//   .problem-structure{
+//     margin-top: 70px;
+//     padding: 0 103px 0 103px;
+//     h3{
+//       font-family: 'Exo 2';
+//       font-style: normal;
+//       font-weight: 600;
+//       font-size: 48px;
+//       line-height: 64px;
+//       color: #000000;
+//     }
+//     p{
+//       font-family: 'Exo 2';
+//       font-style: normal;
+//       font-weight: normal;
+//       font-size: 24px;
+//       line-height: 32px;
+//       color: #000000;
+//     }
+//   }
+// }
