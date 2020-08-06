@@ -13,16 +13,34 @@ document.addEventListener('click', (e) => {
 });
 
 async function sendFormTelegram() {
-  const body = {
-    name: nameBanner.value,
-    phone: phoneBanner.value,
-    comment: commentBanner.value,
-    file: fileBanner.files[0],
-  };
+  const formD = new FormData();
+  await formD.append('photo', fileBanner.files[0]);
+  await formD.append('name', nameBanner.value);
+  await formD.append('phone', phoneBanner.value);
+  await formD.append('comment', commentBanner.value);
+
   try {
-    console.log(body);
-    const res = await axios.post('/', body);
+    const res = await axios.post('/', formD);
     console.log(res.data);
+    nameBanner.value = '';
+    phoneBanner.value = '';
+    commentBanner.value = '';
+    fileBanner.value = '';
+    const url =
+      'https://api.telegram.org/bot1233667834:AAHz_bng0VaZaI8UxLH6QXHpBC8wU-04WIY/sendMessage?chat_id=-440657814&text=';
+    const text =
+      'Заказ от: ' +
+      res.data.name +
+      '%0AТелефон: ' +
+      res.data.phone +
+      '%0AКомментарий: ' +
+      res.data.text;
+    let sendedUrl = url + text;
+    const textLink = '';
+    await fetch(sendedUrl);
+    const photoLink =
+      'https://api.telegram.org/bot1233667834:AAHz_bng0VaZaI8UxLH6QXHpBC8wU-04WIY/sendPhoto?chat_id=-440657814&photo=';
+    await fetch(photoLink + res.data.postImage);
   } catch (err) {
     console.log(err);
   }

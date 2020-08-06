@@ -75,7 +75,7 @@
           </div>
 
           <div class="banner__form-form">
-            <form  enctype="multipart/form-data">
+            <form enctype="multipart/form-data">
               <h3>Заполните форму</h3>
               <p>Опишите свою проблему и мы свяжемся с вами</p>
               <div class="form_area">
@@ -91,11 +91,11 @@
                     <span class="js-fileName">Загрузить файл</span>
                   </label>
                   <input
+                    name="photo_input"
                     type="file"
                     placeholder="Добавить медиафайл"
                     class="input-file"
                     id="addfile"
-                    
                   />
                 </div>
                 <textarea
@@ -207,7 +207,13 @@
 
           <div class="problem-blinking">
             <h3>Темный экран и/или мерцание дисплея</h3>
+
             <div class="problem-blinking_box">
+              <img
+                class="problem-group__blink-pcscreen"
+                src="assets/img/problems/Мерцание-монитора-ГИФ.gif"
+                alt=""
+              />
               <img
                 class="problem-blackscreen"
                 src="assets/img/problems/blackscreen.png"
@@ -570,6 +576,10 @@
   
   </div> -->
     <script src="./index.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js" integrity="sha512-VZ6m0F78+yo3sbu48gElK4irv2dzPoep8oo9LEjxviigcnnnNvnTOJRSrIhuFk68FMLOpiNz+T77nNY89rnWDg==" crossorigin="anonymous"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"
+      integrity="sha512-VZ6m0F78+yo3sbu48gElK4irv2dzPoep8oo9LEjxviigcnnnNvnTOJRSrIhuFk68FMLOpiNz+T77nNY89rnWDg=="
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>

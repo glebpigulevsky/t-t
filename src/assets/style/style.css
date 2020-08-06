@@ -791,6 +791,14 @@ header .header__row .header__contacts .header__phone a {
   font-weight: bold;
   margin-bottom: 0px;
 }
+.problem-blinking .problem-group__blink-pcscreen {
+  width: 100%;
+}
+@media (max-width: 767px) {
+  .problem-blinking .problem-group__blink-pcscreen {
+    display: none;
+  }
+}
 .problem-blinking .problem-blackscreen {
   display: none;
 }

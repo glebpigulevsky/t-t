@@ -101,6 +101,12 @@
     font-weight: bold;
     margin-bottom: 0px;
   }
+  .problem-group__blink-pcscreen {
+    width: 100%;
+    @media (max-width: 767px) {
+      display: none;
+    }
+  }
 
   .problem-blackscreen {
     display: none;
