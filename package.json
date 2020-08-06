@@ -8,8 +8,8 @@
     "style": "sass --watch src/assets/style/style.scss src/assets/style/style.css",
     "lint:fix": "eslint ./src --fix",
     "lint": "eslint ./src",
-    "dev": "nodemon app.js",
-    "start": "node index.js"
+    "dev": "nodemon",
+    "start": "node index"
   },
   "repository": {
     "type": "git",

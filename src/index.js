@@ -36,7 +36,7 @@ async function sendFormTelegram() {
       '%0AКомментарий: ' +
       res.data.text;
     let sendedUrl = url + text;
-    const textLink = '';
+
     await fetch(sendedUrl);
     const photoLink =
       'https://api.telegram.org/bot1233667834:AAHz_bng0VaZaI8UxLH6QXHpBC8wU-04WIY/sendPhoto?chat_id=-440657814&photo=';
