@@ -1,0 +1,5 @@
+{
+  "mongoURI": "mongodb+srv://admin:admin@cluster0.1xnuj.mongodb.net/t8t?retryWrites=true&w=majority",
+
+  "mongoGridURI": "mongodb+srv://admin:admin@cluster0.1xnuj.mongodb.net/t8t?retryWrites=true&w=majority"
+}
