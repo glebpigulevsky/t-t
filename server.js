@@ -67,11 +67,11 @@ const storage = new GridFsStorage({
 });
 const upload = multer({ storage });
 
-// @route GET /
-// @desc Loads form
-app.get('/', (req, res) => {
-  res.sendFile(path.resolve(__dirname, 'src', 'index.html'));
-});
+// // @route GET /
+// // @desc Loads form
+// app.get('/', (req, res) => {
+//   res.sendFile(path.resolve(__dirname, 'src', 'index.html'));
+// });
 
 // @route GET /image/:filename
 // @desc  Display Image
