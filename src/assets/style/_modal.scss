@@ -1,0 +1,83 @@
+.modal__overlay,
+.error_form {
+  position: fixed;
+  z-index: 2000;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  .message {
+    width: 1235px;
+    height: auto;
+    background-color: #ffffff;
+    color: white;
+    margin: 10% auto;
+    border-radius: 7px;
+    padding: 20px;
+    .modal_close {
+      display: flex;
+      justify-content: flex-end;
+      cursor: pointer;
+    }
+    .message_body {
+      display: flex;
+      flex-direction: column;
+    }
+    .success_pict {
+      width: auto;
+      margin: 0 auto;
+      margin-bottom: 31px;
+    }
+    .message_title {
+      margin-bottom: 40px;
+    }
+    h3 {
+      font-family: 'Exo 2';
+      font-style: normal;
+      font-weight: 600;
+      font-size: 64px;
+      line-height: 85px;
+      text-align: center;
+
+      color: #000000;
+    }
+    .message_text {
+      margin-bottom: 94px;
+    }
+    p {
+      font-family: 'Exo 2';
+      font-style: italic;
+      font-weight: 600;
+      font-size: 36px;
+      line-height: 48px;
+      text-align: center;
+
+      color: #000000;
+    }
+  }
+}
+
+.error_form {
+  position: fixed;
+  z-index: 2000;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  .message {
+    width: 50%;
+    height: auto;
+    background-color: #ffffff;
+    color: white;
+    margin: 10% auto;
+    border-radius: 7px;
+    padding: 20px;
+    .error_form_close {
+      display: flex;
+      justify-content: flex-end;
+      cursor: pointer;
+    }
+  }
+}

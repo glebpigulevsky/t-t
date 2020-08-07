@@ -135,7 +135,7 @@
         height: 80px;
         resize: none;
       }
-      .input_button-contacts {
+      .input_button-contacts_mobile {
         margin-top: 20px;
         background: #da1a1a;
         box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.25);
@@ -231,7 +231,7 @@
         height: 140px;
         resize: none;
       }
-      .input_button-contacts {
+      .input_button-contacts_screen {
         margin-top: 20px;
         background: #da1a1a;
         box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.25);
@@ -449,7 +449,15 @@
   margin-top: 15px;
 }
 .example-3 {
-  .input-file {
+  .input-file_about_mobile {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+  }
+  .fileBannerAboutScreen {
     width: 0.1px;
     height: 0.1px;
     opacity: 0;

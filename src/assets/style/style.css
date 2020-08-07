@@ -3,7 +3,7 @@ header {
 }
 @media (max-width: 767px) {
   header {
-    background-color: #1B1B1B;
+    background-color: #1b1b1b;
   }
 }
 header .header__row {
@@ -74,7 +74,7 @@ header .header__row .header__contacts .header__adress {
   font-weight: 600;
   font-size: 1.5rem;
   line-height: 2rem;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 @media (max-width: 863px) {
   header .header__row .header__contacts .header__adress {
@@ -108,7 +108,10 @@ header .header__row .header__contacts .header__phone p {
   font-weight: 600;
   font-size: 24px;
   line-height: 32px;
-  color: #FFFFFF;
+  color: #ffffff;
+}
+header .header__row .header__contacts .header__phone p a {
+  text-decoration: none;
 }
 @media (max-width: 863px) {
   header .header__row .header__contacts .header__phone p {
@@ -122,7 +125,7 @@ header .header__row .header__contacts .header__phone a {
   font-weight: 600;
   font-size: 24px;
   line-height: 32px;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 @media (max-width: 863px) {
   header .header__row .header__contacts .header__phone a {
@@ -1398,7 +1401,7 @@ header .header__row .header__contacts .header__phone a {
   height: 80px;
   resize: none;
 }
-.contacts_form_mobile form .form_area .input_button-contacts {
+.contacts_form_mobile form .form_area .input_button-contacts_mobile {
   margin-top: 20px;
   background: #da1a1a;
   box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.25);
@@ -1496,7 +1499,7 @@ header .header__row .header__contacts .header__phone a {
   height: 140px;
   resize: none;
 }
-.contact_map-form .contacts_form .form_area .input_button-contacts {
+.contact_map-form .contacts_form .form_area .input_button-contacts_screen {
   margin-top: 20px;
   background: #da1a1a;
   box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.25);
@@ -1560,13 +1563,116 @@ header .header__row .header__contacts .header__phone a {
   margin-top: 15px;
 }
 
-.example-3 .input-file {
+.example-3 .input-file_about_mobile {
   width: 0.1px;
   height: 0.1px;
   opacity: 0;
   overflow: hidden;
   position: absolute;
   z-index: -1;
+}
+.example-3 .fileBannerAboutScreen {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+
+.modal__overlay,
+.error_form {
+  position: fixed;
+  z-index: 2000;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.modal__overlay .message,
+.error_form .message {
+  width: 1235px;
+  height: auto;
+  background-color: #ffffff;
+  color: white;
+  margin: 10% auto;
+  border-radius: 7px;
+  padding: 20px;
+}
+.modal__overlay .message .modal_close,
+.error_form .message .modal_close {
+  display: flex;
+  justify-content: flex-end;
+  cursor: pointer;
+}
+.modal__overlay .message .message_body,
+.error_form .message .message_body {
+  display: flex;
+  flex-direction: column;
+}
+.modal__overlay .message .success_pict,
+.error_form .message .success_pict {
+  width: auto;
+  margin: 0 auto;
+  margin-bottom: 31px;
+}
+.modal__overlay .message .message_title,
+.error_form .message .message_title {
+  margin-bottom: 40px;
+}
+.modal__overlay .message h3,
+.error_form .message h3 {
+  font-family: "Exo 2";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 64px;
+  line-height: 85px;
+  text-align: center;
+  color: #000000;
+}
+.modal__overlay .message .message_text,
+.error_form .message .message_text {
+  margin-bottom: 94px;
+}
+.modal__overlay .message p,
+.error_form .message p {
+  font-family: "Exo 2";
+  font-style: italic;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 48px;
+  text-align: center;
+  color: #000000;
+}
+
+.error_form {
+  position: fixed;
+  z-index: 2000;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.error_form .message {
+  width: 50%;
+  height: auto;
+  background-color: #ffffff;
+  color: white;
+  margin: 10% auto;
+  border-radius: 7px;
+  padding: 20px;
+}
+.error_form .message .error_form_close {
+  display: flex;
+  justify-content: flex-end;
+  cursor: pointer;
+}
+
+body,
+html {
+  scroll-behavior: smooth;
 }
 
 .container {
@@ -1601,6 +1707,10 @@ header .header__row .header__contacts .header__phone a {
 
 .border-red {
   border: 1px solid red;
+}
+
+.hidden {
+  visibility: hidden;
 }
 
 /*# sourceMappingURL=style.css.map */

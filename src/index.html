@@ -26,7 +26,45 @@
   </head>
   <body>
     <div class="wrapper">
-      <header class="header">
+      <div class="modal__overlay hidden">
+        <div class="message">
+          <div class="modal_close">
+            <div>
+              <img
+                src="./assets/img/modal/cross (1) 1.png"
+                alt="close button"
+              />
+            </div>
+          </div>
+          <div class="message_body">
+            <div class="success_pict">
+              <img src="./assets/img/modal/tick 1.png" alt="success button" />
+            </div>
+            <div class="message_title">
+              <h3>Спасибо, ваша заявка принята!</h3>
+            </div>
+            <div class="message_text">
+              <p>В ближайшее время с вами свяжется наш специалист</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="error_form hidden">
+        <div class="message">
+          <div class="error_form_close">
+            <div>
+              <img
+                src="./assets/img/modal/cross (1) 1.png"
+                alt="close button"
+              />
+            </div>
+          </div>
+          <p>
+            Пожалуйста, заполните все поля формы и приложите фото неисправности.
+          </p>
+        </div>
+      </div>
+      <header class="header" id="header">
         <div class="container">
           <div class="header__row">
             <div class="header__logo-burger">
@@ -41,15 +79,15 @@
                 <p>График работы: 9:00 - 18:00</p>
               </div>
               <div class="header__phone">
-                <p>+375(44)-760-74-60</p>
-                <a href="">Заказать звонок</a>
+                <p><a href="tel:+375(44)-760-74-60">+375(44)-760-74-60</a></p>
+                <a href="#banner__form">Заказать звонок</a>
               </div>
             </div>
           </div>
         </div>
       </header>
 
-      <div class="banner">
+      <div class="banner" id="banner">
         <div class="container banner__mobile-padding">
           <div class="banner-text">
             <div class="banner-text_1">
@@ -65,7 +103,7 @@
         </div>
       </div>
 
-      <div class="banner__form">
+      <div class="banner__form" id="banner__form">
         <div class="container container__banner__form-flex">
           <div class="banner__form-text">
             Мы не выполняем ремонт механических повреждений. Но в
@@ -79,8 +117,14 @@
               <h3>Заполните форму</h3>
               <p>Опишите свою проблему и мы свяжемся с вами</p>
               <div class="form_area">
-                <input type="text" placeholder="Ваше имя" class="name_banner" />
                 <input
+                  type="text"
+                  placeholder="Ваше имя"
+                  class="name_banner"
+                  name="name_input"
+                />
+                <input
+                  name="phone_number"
                   type="text"
                   placeholder="Номер телефона"
                   required
@@ -99,7 +143,8 @@
                   />
                 </div>
                 <textarea
-                  name=""
+                  name="text_message"
+                  required
                   id=""
                   cols="20"
                   rows="10"
@@ -117,7 +162,7 @@
         </div>
       </div>
 
-      <div class="about">
+      <div class="about" id="about">
         <div class="container about__container--wpadding">
           <h3 class="about__main-title--mobile">О нас</h3>
           <div class="about__flex-container">
@@ -156,7 +201,7 @@
         </div>
       </div>
 
-      <div class="problems">
+      <div class="problems" id="problems">
         <div class="container">
           <h3 class="problems__main-title--mobile">
             Вы забудете об этих проблемах...
@@ -275,7 +320,7 @@
         </div>
       </div>
 
-      <div class="gallery">
+      <div class="gallery" id="gallery">
         <div class="carousel">
           <h3>Как мы работаем</h3>
           <div class="carousel_video">
@@ -301,7 +346,7 @@
         </div>
       </div>
 
-      <div class="price">
+      <div class="price" id="price">
         <div class="container">
           <h3>Прайс</h3>
           <p>
@@ -325,15 +370,24 @@
         </div>
       </div>
 
-      <div class="contact">
+      <div class="contact" id="contact">
         <div class="contacts_form_mobile">
-          <form action="POST">
+          <form enctype="multipart/form-data">
             <p>Вы все еще думаетет, что проще купить новую технику?</p>
             <h3>Свяжитесь с нами!</h3>
 
             <div class="form_area">
-              <input type="text" placeholder="Ваше имя" />
-              <input type="text" placeholder="Номер телефона" />
+              <input
+                type="text"
+                placeholder="Ваше имя"
+                class="name_banner_about_mobile"
+              />
+              <input
+                type="text"
+                placeholder="Номер телефона"
+                required
+                class="phone_banner_about_mobile"
+              />
               <div class="example-3">
                 <label
                   for="addfile_contacts"
@@ -344,21 +398,22 @@
                 <input
                   type="file"
                   placeholder="Добавить медиафайл"
-                  class="input-file"
+                  class="input-file_about_mobile"
                   id="addfile_contacts"
                 />
               </div>
               <textarea
                 name=""
-                id=""
+                id="comment_form_about_mobile"
                 cols="20"
                 rows="10"
                 placeholder="Комментарий"
+                class="comment_banner_about_mobile"
               ></textarea>
               <input
                 type="submit"
                 value="Отправить заявку"
-                class="input_button-contacts"
+                class="input_button-contacts_mobile"
               />
             </div>
           </form>
@@ -377,13 +432,21 @@
         <div class="contact_map-form">
           <div id="map"></div>
           <div class="contacts_form">
-            <form action="POST">
+            <form enctype="multipart/form-data">
               <p>Вы все еще думаетет, что проще купить новую технику?</p>
               <h3>Свяжитесь с нами!</h3>
 
               <div class="form_area">
-                <input type="text" placeholder="Ваше имя" />
-                <input type="text" placeholder="Номер телефона" />
+                <input
+                  type="text"
+                  placeholder="Ваше имя"
+                  class="name_banner_about_screen"
+                />
+                <input
+                  type="text"
+                  placeholder="Номер телефона"
+                  class="phone_banner_about_screen"
+                />
                 <div class="example-3">
                   <label
                     for="addfile_contacts"
@@ -394,13 +457,12 @@
                   <input
                     type="file"
                     placeholder="Добавить медиафайл"
-                    class="input-file"
-                    id="addfile_contacts"
+                    class="fileBannerAboutScreen"
                   />
                 </div>
                 <textarea
                   name=""
-                  id=""
+                  class="comment_banner_about_screen"
                   cols="20"
                   rows="10"
                   placeholder="Комментарий"
@@ -408,7 +470,7 @@
                 <input
                   type="submit"
                   value="Отправить заявку"
-                  class="input_button-contacts"
+                  class="input_button-contacts_screen"
                 />
               </div>
             </form>
@@ -416,19 +478,19 @@
         </div>
       </div>
 
-      <div class="footer">
+      <div class="footer" id="footer">
         <div class="container container__footer">
           <div class="footer_flex">
             <div class="footer_nav">
               <h4>Навигация</h4>
               <ul>
-                <li><a href="">Главная</a></li>
-                <li><a href="">О нас</a></li>
-                <li><a href="">Наши преимущества</a></li>
-                <li><a href="">Наши услуги</a></li>
-                <li><a href="">Наши работы</a></li>
-                <li><a href="">Наши цены</a></li>
-                <li><a href="">Контакты</a></li>
+                <li><a href="#">Главная</a></li>
+                <li><a href="#about">О нас</a></li>
+
+                <li><a href="#problems">Наши услуги</a></li>
+                <li><a href="#gallery">Наши работы</a></li>
+                <li><a href="#price">Наши цены</a></li>
+                <li><a href="#contact">Контакты</a></li>
               </ul>
             </div>
             <div class="footer_logo">
@@ -446,7 +508,7 @@
                   src="assets/img/footer/facebook.png"
                   alt="ссылка на фейсбук"
               /></a>
-              <a href=""
+              <a href="https://www.youtube.com/channel/UC2H0DaBSqaHC0IFC15WnxjQ"
                 ><img src="assets/img/footer/youtube.png" alt="ссылка на ютуб"
               /></a>
             </div>
@@ -460,13 +522,13 @@
             <div class="footer_nav">
               <h4>Навигация</h4>
               <ul>
-                <li><a href="">Главная</a></li>
-                <li><a href="">О нас</a></li>
-                <li><a href="">Наши преимущества</a></li>
-                <li><a href="">Наши услуги</a></li>
-                <li><a href="">Наши работы</a></li>
-                <li><a href="">Наши цены</a></li>
-                <li><a href="">Контакты</a></li>
+                <li><a href="#">Главная</a></li>
+                <li><a href="#about">О нас</a></li>
+
+                <li><a href="#problems">Наши услуги</a></li>
+                <li><a href="#gallery">Наши работы</a></li>
+                <li><a href="#price">Наши цены</a></li>
+                <li><a href="#contact">Контакты</a></li>
               </ul>
             </div>
 
@@ -489,7 +551,8 @@
                     src="assets/img/footer/facebook.png"
                     alt="ссылка на фейсбук"
                 /></a>
-                <a href=""
+                <a
+                  href="https://www.youtube.com/channel/UC2H0DaBSqaHC0IFC15WnxjQ"
                   ><img
                     src="assets/img/footer/youtube.png"
                     alt="ссылка на ютуб"
@@ -514,67 +577,6 @@
       </div>
     </div>
 
-    <!-- 
-
-  
-
-  <div class="container price">
-    <div class="price-text">
-      <h3>Прайс</h3>
-      <p>Цены на ремонт ЖК матриц различных размеров указаны без стоимости шлейфов:
-      </p>
-      <div class="price-flex">
-        <div><img src="assets/img/price/tvX.png" alt="телевизор с диагональю"></div>
-        <div>
-          <img src="assets/img/price/Прайс.png" alt="прайс на услуги ремонта">
-        </div>
-      </div>
-    </div>
-    
-  </div>
-  
-  <div class="container contact">
-    <div class="contacts">
-      <div class="contacts_text">
-        <h3>Как нас найти</h3>
-        <div class="contacts_text-addr">
-          <div class="contacts_adress">
-            <p>г. Минск, л. Я. Коласа 73-2, офис. 25</p>
-          </div>
-          <div class="contacts_time">
-            <p>График работы: 9:00 - 18:00, <span>Пн - Пт</span></p>
-            
-          </div>
-        </div>
-      </div>
-      <div class="contacts_map">
-
-      </div>
-      <div class="contacts_form">
-        <form action="POST">
-          <p>Вы все еще думаетет, что проще купить новую технику?</p>
-          <h3>Свяжитесь с нами!</h3>
-          
-          <div class="form_area">
-            <input type="text" placeholder="Ваше имя">
-            <input type="text" placeholder="Номер телефона">
-            <div class="example-3">
-              <label for="addfile_contacts" class="btn btn-tertiary_contacts js-labelFile">
-                <span class="js-fileName">Загрузить файл</span>
-              </label>
-              <input type="file" placeholder="Добавить медиафайл" class="input-file" id="addfile_contacts">
-            </div>
-            <textarea name="" id="" cols="20" rows="10" placeholder="Комментарий"></textarea>
-            <input type="submit" value="Отправить заявку" class="input_button-contacts">
-          </div>
-          
-        </form>
-      </div>
-    </div>
-  </div>
-
-  
-  </div> -->
     <script src="./index.js"></script>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"
