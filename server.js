@@ -1,3 +1,4 @@
+const PORT = process.env.PORT || 5000;
 const express = require('express');
 const connectDB = require('./config/db');
 const config = require('config');
@@ -6,7 +7,7 @@ const path = require('path');
 const methodOverride = require('method-override');
 const dbGrid = config.get('mongoGridURI');
 var telegram = require('telegram-bot-api');
-
+const http = require('http');
 const mongoose = require('mongoose');
 const multer = require('multer');
 const GridFsStorage = require('multer-gridfs-storage');
@@ -14,13 +15,15 @@ const crypto = require('crypto');
 const Grid = require('gridfs-stream');
 
 const Post = require('./models/Post');
-const axios = require('axios');
+const server = http.Server(app);
 
 // Init Middleware
 app.use(express.json({ extended: false }));
 app.use(methodOverride('_method'));
 
 app.use(express.static('src/'));
+
+server.listen(PORT, () => console.log(`Server started on port ${PORT}`));
 
 //Connect DB
 connectDB();
@@ -152,7 +155,3 @@ async function sendMessage(text) {
     console.error(error);
   }
 }
-
-const PORT = process.env.PORT || 5000;
-
-app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
