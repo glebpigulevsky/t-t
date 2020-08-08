@@ -1,7 +1,11 @@
 .gallery {
+  margin-top: 100px;
   background-image: url(../img/work/bg.png);
   background-size: cover;
   background-repeat: no-repeat;
+  @media (max-width: 767px) {
+    margin-top: 39px;
+  }
   .carousel {
     width: 100%;
     padding-bottom: 12%;

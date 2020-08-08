@@ -141,8 +141,27 @@
       }
     }
   }
+  .toogle__btn-readmore {
+    text-align: center;
+    margin-top: 20px;
+    a {
+      font-family: 'Exo 2';
+      font-style: normal;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 21px;
+      text-align: center;
+      color: #ff0000;
+    }
+    @media (min-width: 767px) {
+      display: none;
+    }
+  }
 }
 .lcd-structure {
+  @media (max-width: 767px) {
+    display: none;
+  }
   h3 {
     padding-top: 70px;
     padding-bottom: 50px;

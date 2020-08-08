@@ -51,6 +51,9 @@
         text-decoration: underline;
         font-weight: bold;
         color: #ffffff;
+        @media (max-width: 767px) {
+          color: #000000;
+        }
       }
       @media (max-width: 767px) {
         font-size: 18px;

@@ -18,19 +18,40 @@ const nameBannerAboutScreen = document.querySelector(
 const phoneBannerAboutScreen = document.querySelector(
   '.phone_banner_about_screen'
 );
-const fileBannerAboutScreen = document.querySelector('.fileBannerAboutScreen');
+
+const fileInputAboutScreen = document.querySelector('.input-file_about_screen');
 const commentBannerAboutScreen = document.querySelector(
   '.comment_banner_about_screen'
 );
 
 const closeModal = document.querySelector('.modal_close');
 const closeErrorFromModal = document.querySelector('.error_form_close');
+const errorInsertBlock = document.querySelector('.error_form_insert');
+
+const errorMessage = {
+  inputValuesEmpty: `<p>
+  Пожалуйста, заполните все поля формы и приложите фото неисправности.
+</p>`,
+  fileType: `<p>
+Пожалуйста, выберите файл формата jpg
+</p>`,
+  fileSize: `<p>
+Пожалуйста, выберите файл меньшего размера(не более 2 мб)
+</p>`,
+};
 
 document.addEventListener('click', async (e) => {
   if (e.target === document.querySelector('.input_button-contacts_mobile')) {
     e.preventDefault();
     if (phoneBannerAbout.value === '' || commentBannerAbout.value === '') {
       document.querySelector('.error_form').classList.remove('hidden');
+      errorInsertBlock.innerHTML = errorMessage.inputValuesEmpty;
+    } else if (fileBannerAbout.files[0].type !== 'image/jpeg') {
+      document.querySelector('.error_form').classList.remove('hidden');
+      errorInsertBlock.innerHTML = errorMessage.fileType;
+    } else if (fileBannerAbout.files[0].size > 200000) {
+      document.querySelector('.error_form').classList.remove('hidden');
+      errorInsertBlock.innerHTML = errorMessage.fileSize;
     } else {
       const formD = new FormData();
       await formD.append('photo', fileBannerAbout.files[0]);
@@ -53,9 +74,16 @@ document.addEventListener('click', async (e) => {
       commentBannerAboutScreen.value === ''
     ) {
       document.querySelector('.error_form').classList.remove('hidden');
+      errorInsertBlock.innerHTML = errorMessage.inputValuesEmpty;
+    } else if (fileInputAboutScreen.files[0].type !== 'image/jpeg') {
+      document.querySelector('.error_form').classList.remove('hidden');
+      errorInsertBlock.innerHTML = errorMessage.fileType;
+    } else if (fileInputAboutScreen.files[0].size > 200000) {
+      document.querySelector('.error_form').classList.remove('hidden');
+      errorInsertBlock.innerHTML = errorMessage.fileSize;
     } else {
       const formD = new FormData();
-      await formD.append('photo', fileBannerAboutScreen.files[0]);
+      await formD.append('photo', fileInputAboutScreen.files[0]);
       await formD.append('name', nameBannerAboutScreen.value);
       await formD.append('phone', phoneBannerAboutScreen.value);
       await formD.append('comment', commentBannerAboutScreen.value);
@@ -63,20 +91,9 @@ document.addEventListener('click', async (e) => {
       nameBannerAboutScreen.value = '';
       phoneBannerAboutScreen.value = '';
       commentBannerAboutScreen.value = '';
-      fileBannerAboutScreen.value = '';
+      fileInputAboutScreen.value = '';
     }
   }
-});
-
-function openModal() {
-  document.querySelector('.modal__overlay').classList.remove('hidden');
-}
-
-closeModal.addEventListener('click', () => {
-  document.querySelector('.modal__overlay').classList.add('hidden');
-});
-closeErrorFromModal.addEventListener('click', () => {
-  document.querySelector('.error_form').classList.add('hidden');
 });
 
 document.addEventListener('click', async (e) => {
@@ -84,7 +101,15 @@ document.addEventListener('click', async (e) => {
     e.preventDefault();
     if (phoneBanner.value === '' && commentBanner.value === '') {
       document.querySelector('.error_form').classList.remove('hidden');
+      errorInsertBlock.innerHTML = errorMessage.inputValuesEmpty;
+    } else if (fileBanner.files[0].type !== 'image/jpeg') {
+      document.querySelector('.error_form').classList.remove('hidden');
+      errorInsertBlock.innerHTML = errorMessage.fileType;
+    } else if (fileBanner.files[0].size > 200000) {
+      document.querySelector('.error_form').classList.remove('hidden');
+      errorInsertBlock.innerHTML = errorMessage.fileSize;
     } else {
+      console.log(fileBanner.files[0]);
       const formD = new FormData();
       await formD.append('photo', fileBanner.files[0]);
       await formD.append('name', nameBanner.value);
@@ -101,23 +126,23 @@ document.addEventListener('click', async (e) => {
 
 async function sendFormTelegram(form) {
   try {
-    const res = await axios.post('/', form);
-    console.log(res.data);
+    // const res = await axios.post('/', form);
+    // console.log(res.data);
 
-    const url =
-      'https://api.telegram.org/bot1233667834:AAHz_bng0VaZaI8UxLH6QXHpBC8wU-04WIY/sendMessage?chat_id=-440657814&text=';
-    const text =
-      'Заказ от: ' +
-      res.data.name +
-      '%0AТелефон: ' +
-      res.data.phone +
-      '%0AКомментарий: ' +
-      res.data.text;
-    let sendedUrl = url + text;
-    await fetch(sendedUrl);
-    const photoLink =
-      'https://api.telegram.org/bot1233667834:AAHz_bng0VaZaI8UxLH6QXHpBC8wU-04WIY/sendPhoto?chat_id=-440657814&photo=';
-    await fetch(photoLink + res.data.postImage);
+    // const url =
+    //   'https://api.telegram.org/bot1233667834:AAHz_bng0VaZaI8UxLH6QXHpBC8wU-04WIY/sendMessage?chat_id=-440657814&text=';
+    // const text =
+    //   'Заказ от: ' +
+    //   res.data.name +
+    //   '%0AТелефон: ' +
+    //   res.data.phone +
+    //   '%0AКомментарий: ' +
+    //   res.data.text;
+    // let sendedUrl = url + text;
+    // await fetch(sendedUrl);
+    // const photoLink =
+    //   'https://api.telegram.org/bot1233667834:AAHz_bng0VaZaI8UxLH6QXHpBC8wU-04WIY/sendPhoto?chat_id=-440657814&photo=';
+    // await fetch(photoLink + res.data.postImage);
     openModal();
   } catch (err) {
     console.log(err);
@@ -127,3 +152,15 @@ async function sendFormTelegram(form) {
 function addModal() {
   let modalDiv = document.querySelector('.modal__overlay');
 }
+
+function openModal() {
+  document.querySelector('.modal__overlay').classList.remove('hidden');
+}
+
+closeModal.addEventListener('click', () => {
+  document.querySelector('.modal__overlay').classList.add('hidden');
+});
+closeErrorFromModal.addEventListener('click', () => {
+  document.querySelector('.error_form').classList.add('hidden');
+  errorInsertBlock.innerHTML = '';
+});

@@ -568,6 +568,11 @@ header .header__row .header__contacts .header__phone a {
   color: #ffffff;
 }
 @media (max-width: 767px) {
+  .about .about__text p a {
+    color: #000000;
+  }
+}
+@media (max-width: 767px) {
   .about .about__text p {
     font-size: 18px;
     color: #000000;
@@ -839,7 +844,30 @@ header .header__row .header__contacts .header__phone a {
     position: relative;
   }
 }
+.problem-blinking .toogle__btn-readmore {
+  text-align: center;
+  margin-top: 20px;
+}
+.problem-blinking .toogle__btn-readmore a {
+  font-family: "Exo 2";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 21px;
+  text-align: center;
+  color: #ff0000;
+}
+@media (min-width: 767px) {
+  .problem-blinking .toogle__btn-readmore {
+    display: none;
+  }
+}
 
+@media (max-width: 767px) {
+  .lcd-structure {
+    display: none;
+  }
+}
 .lcd-structure h3 {
   padding-top: 70px;
   padding-bottom: 50px;
@@ -897,9 +925,15 @@ header .header__row .header__contacts .header__phone a {
 }
 
 .gallery {
+  margin-top: 100px;
   background-image: url(../img/work/bg.png);
   background-size: cover;
   background-repeat: no-repeat;
+}
+@media (max-width: 767px) {
+  .gallery {
+    margin-top: 39px;
+  }
 }
 .gallery .carousel {
   width: 100%;
@@ -1562,8 +1596,7 @@ header .header__row .header__contacts .header__phone a {
 .example-3 {
   margin-top: 15px;
 }
-
-.example-3 .input-file_about_mobile {
+.example-3 .input-file_about_screen {
   width: 0.1px;
   height: 0.1px;
   opacity: 0;
@@ -1571,7 +1604,8 @@ header .header__row .header__contacts .header__phone a {
   position: absolute;
   z-index: -1;
 }
-.example-3 .fileBannerAboutScreen {
+
+.example-3 .input-file_about_mobile {
   width: 0.1px;
   height: 0.1px;
   opacity: 0;
@@ -1592,13 +1626,19 @@ header .header__row .header__contacts .header__phone a {
 }
 .modal__overlay .message,
 .error_form .message {
-  width: 1235px;
+  width: 655px;
   height: auto;
   background-color: #ffffff;
   color: white;
   margin: 10% auto;
   border-radius: 7px;
   padding: 20px;
+}
+@media (max-width: 767px) {
+  .modal__overlay .message,
+.error_form .message {
+    width: 79vw;
+  }
 }
 .modal__overlay .message .modal_close,
 .error_form .message .modal_close {
@@ -1626,22 +1666,28 @@ header .header__row .header__contacts .header__phone a {
   font-family: "Exo 2";
   font-style: normal;
   font-weight: 600;
-  font-size: 64px;
-  line-height: 85px;
+  font-size: 36px;
+  line-height: 48px;
   text-align: center;
   color: #000000;
 }
 .modal__overlay .message .message_text,
 .error_form .message .message_text {
-  margin-bottom: 94px;
+  margin-bottom: 60px;
+}
+@media (max-width: 767px) {
+  .modal__overlay .message .message_text,
+.error_form .message .message_text {
+    margin-bottom: 0px;
+  }
 }
 .modal__overlay .message p,
 .error_form .message p {
   font-family: "Exo 2";
   font-style: italic;
   font-weight: 600;
-  font-size: 36px;
-  line-height: 48px;
+  font-size: 24px;
+  line-height: 32px;
   text-align: center;
   color: #000000;
 }
@@ -1656,13 +1702,18 @@ header .header__row .header__contacts .header__phone a {
   background-color: rgba(0, 0, 0, 0.7);
 }
 .error_form .message {
-  width: 50%;
+  width: 655px;
   height: auto;
   background-color: #ffffff;
   color: white;
   margin: 10% auto;
   border-radius: 7px;
   padding: 20px;
+}
+@media (max-width: 767px) {
+  .error_form .message {
+    width: 79vw;
+  }
 }
 .error_form .message .error_form_close {
   display: flex;

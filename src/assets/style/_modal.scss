@@ -8,13 +8,16 @@
   height: 100%;
   background-color: rgba(0, 0, 0, 0.7);
   .message {
-    width: 1235px;
+    width: 655px;
     height: auto;
     background-color: #ffffff;
     color: white;
     margin: 10% auto;
     border-radius: 7px;
     padding: 20px;
+    @media (max-width: 767px) {
+      width: 79vw;
+    }
     .modal_close {
       display: flex;
       justify-content: flex-end;
@@ -36,21 +39,24 @@
       font-family: 'Exo 2';
       font-style: normal;
       font-weight: 600;
-      font-size: 64px;
-      line-height: 85px;
+      font-size: 36px;
+      line-height: 48px;
       text-align: center;
 
       color: #000000;
     }
     .message_text {
-      margin-bottom: 94px;
+      margin-bottom: 60px;
+      @media (max-width: 767px) {
+        margin-bottom: 0px;
+      }
     }
     p {
       font-family: 'Exo 2';
       font-style: italic;
       font-weight: 600;
-      font-size: 36px;
-      line-height: 48px;
+      font-size: 24px;
+      line-height: 32px;
       text-align: center;
 
       color: #000000;
@@ -67,13 +73,16 @@
   height: 100%;
   background-color: rgba(0, 0, 0, 0.7);
   .message {
-    width: 50%;
+    width: 655px;
     height: auto;
     background-color: #ffffff;
     color: white;
     margin: 10% auto;
     border-radius: 7px;
     padding: 20px;
+    @media (max-width: 767px) {
+      width: 79vw;
+    }
     .error_form_close {
       display: flex;
       justify-content: flex-end;

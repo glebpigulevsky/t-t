@@ -447,9 +447,7 @@
 }
 .example-3 {
   margin-top: 15px;
-}
-.example-3 {
-  .input-file_about_mobile {
+  .input-file_about_screen {
     width: 0.1px;
     height: 0.1px;
     opacity: 0;
@@ -457,7 +455,9 @@
     position: absolute;
     z-index: -1;
   }
-  .fileBannerAboutScreen {
+}
+.example-3 {
+  .input-file_about_mobile {
     width: 0.1px;
     height: 0.1px;
     opacity: 0;

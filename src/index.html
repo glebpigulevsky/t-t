@@ -59,9 +59,7 @@
               />
             </div>
           </div>
-          <p>
-            Пожалуйста, заполните все поля формы и приложите фото неисправности.
-          </p>
+          <div class="error_form_insert"></div>
         </div>
       </div>
       <header class="header" id="header">
@@ -132,7 +130,7 @@
                 />
                 <div class="example-2">
                   <label for="addfile" class="btn btn-tertiary js-labelFile">
-                    <span class="js-fileName">Загрузить файл</span>
+                    <span class="js-fileName">Загрузить файл (jpeg)</span>
                   </label>
                   <input
                     name="photo_input"
@@ -286,6 +284,9 @@
               существует вероятность расслоения ЖК дисплея и даже разрушения
               стекла (вероятность 1-3%).
             </div>
+            <div class="toogle__btn-readmore">
+              <a href="">Смотреть еще</a>
+            </div>
           </div>
           <div class="lcd-structure">
             <h3>Структура ЖК дисплея</h3>
@@ -393,7 +394,7 @@
                   for="addfile_contacts"
                   class="btn btn-tertiary_contacts js-labelFile"
                 >
-                  <span class="js-fileName">Загрузить файл</span>
+                  <span class="js-fileName">Загрузить файл (jpeg)</span>
                 </label>
                 <input
                   type="file"
@@ -449,15 +450,17 @@
                 />
                 <div class="example-3">
                   <label
-                    for="addfile_contacts"
+                    for="addfile_contacts_screen"
                     class="btn btn-tertiary_contacts js-labelFile"
                   >
-                    <span class="js-fileName">Загрузить файл</span>
+                    <span class="js-fileName">Загрузить файл (jpeg)</span>
                   </label>
                   <input
+                    name="photo_input"
                     type="file"
                     placeholder="Добавить медиафайл"
-                    class="fileBannerAboutScreen"
+                    class="input-file_about_screen"
+                    id="addfile_contacts_screen"
                   />
                 </div>
                 <textarea
