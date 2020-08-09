@@ -6,7 +6,36 @@ header {
     background-color: #1b1b1b;
   }
 }
-header .header__row {
+header .container__menu {
+  position: relative;
+}
+header .container__menu .mobile__menu {
+  position: fixed;
+  height: 423px;
+  background-color: #000;
+  width: calc(100vw - 20px);
+  z-index: 21;
+  top: -423px;
+  transition: top 1.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+header .container__menu .mobile__menu ul {
+  padding-top: 92px;
+  padding-bottom: 85px;
+  text-align: center;
+}
+header .container__menu .mobile__menu ul li {
+  margin-bottom: 20px;
+}
+header .container__menu .mobile__menu ul li a {
+  text-decoration: none;
+  font-family: "Exo 2";
+  font-style: normal;
+  font-weight: normal;
+  line-height: 24px;
+  color: #fff;
+}
+header .container__menu .header__row {
+  z-index: 23;
   height: 119px;
   display: flex;
   justify-content: space-between;
@@ -14,55 +43,55 @@ header .header__row {
   flex-basis: 400px;
 }
 @media (max-width: 767px) {
-  header .header__row {
+  header .container__menu .header__row {
     height: 65px;
   }
 }
-header .header__row .header__logo-burger {
+header .container__menu .header__row .header__logo-burger {
   flex-grow: 15;
   align-items: center;
   display: flex;
   justify-content: space-between;
 }
-header .header__row .header__logo-burger .header__menu-burger {
+header .container__menu .header__row .header__logo-burger .header__menu-burger {
   display: none;
 }
 @media (max-width: 767px) {
-  header .header__row .header__logo-burger .header__menu-burger {
+  header .container__menu .header__row .header__logo-burger .header__menu-burger {
     display: block;
   }
 }
-header .header__row .header__logo-burger .header__logo {
+header .container__menu .header__row .header__logo-burger .header__logo {
   width: 100px;
   height: 89px;
   background-image: url(../img/header/logo.png);
 }
 @media (max-width: 1023px) {
-  header .header__row .header__logo-burger .header__logo {
+  header .container__menu .header__row .header__logo-burger .header__logo {
     height: 45px;
     width: 80px;
     background-size: contain;
     background-repeat: no-repeat;
   }
 }
-header .header__row .header__contacts {
+header .container__menu .header__row .header__contacts {
   flex-grow: 4;
   flex-shrink: 2;
   display: flex;
   justify-content: space-between;
 }
 @media (max-width: 863px) {
-  header .header__row .header__contacts {
+  header .container__menu .header__row .header__contacts {
     align-items: center;
     justify-content: flex-end;
   }
 }
 @media (max-width: 767px) {
-  header .header__row .header__contacts {
+  header .container__menu .header__row .header__contacts {
     display: none;
   }
 }
-header .header__row .header__contacts .header__adress {
+header .container__menu .header__row .header__contacts .header__adress {
   background-image: url(../img/header/locat.png);
   background-repeat: no-repeat;
   padding-left: 65px;
@@ -77,7 +106,7 @@ header .header__row .header__contacts .header__adress {
   color: #ffffff;
 }
 @media (max-width: 863px) {
-  header .header__row .header__contacts .header__adress {
+  header .container__menu .header__row .header__contacts .header__adress {
     font-size: 1.2rem;
     line-height: 1.4rem;
     width: 295px;
@@ -86,7 +115,7 @@ header .header__row .header__contacts .header__adress {
     padding-left: 55px;
   }
 }
-header .header__row .header__contacts .header__phone {
+header .container__menu .header__row .header__contacts .header__phone {
   width: 228px;
   height: 61px;
   padding-left: 68px;
@@ -95,14 +124,14 @@ header .header__row .header__contacts .header__phone {
   background-position: 2% 60%;
 }
 @media (max-width: 863px) {
-  header .header__row .header__contacts .header__phone {
+  header .container__menu .header__row .header__contacts .header__phone {
     width: 196px;
     height: 45px;
     background-size: contain;
     padding-left: 55px;
   }
 }
-header .header__row .header__contacts .header__phone p {
+header .container__menu .header__row .header__contacts .header__phone p {
   font-family: "Exo 2";
   font-style: normal;
   font-weight: 600;
@@ -110,16 +139,16 @@ header .header__row .header__contacts .header__phone p {
   line-height: 32px;
   color: #ffffff;
 }
-header .header__row .header__contacts .header__phone p a {
+header .container__menu .header__row .header__contacts .header__phone p a {
   text-decoration: none;
 }
 @media (max-width: 863px) {
-  header .header__row .header__contacts .header__phone p {
+  header .container__menu .header__row .header__contacts .header__phone p {
     font-size: 19px;
     line-height: 21px;
   }
 }
-header .header__row .header__contacts .header__phone a {
+header .container__menu .header__row .header__contacts .header__phone a {
   font-family: "Exo 2";
   font-style: normal;
   font-weight: 600;
@@ -128,7 +157,7 @@ header .header__row .header__contacts .header__phone a {
   color: #ffffff;
 }
 @media (max-width: 863px) {
-  header .header__row .header__contacts .header__phone a {
+  header .container__menu .header__row .header__contacts .header__phone a {
     font-size: 19px;
     line-height: 21px;
   }

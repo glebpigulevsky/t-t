@@ -3,112 +3,143 @@ header {
   @media (max-width: 767px) {
     background-color: #1b1b1b;
   }
-  .header__row {
-    height: 119px;
-    @media (max-width: 767px) {
-      height: 65px;
-    }
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-basis: 400px;
-    .header__logo-burger {
-      flex-grow: 15;
-      align-items: center;
-      display: flex;
-      justify-content: space-between;
-      .header__menu-burger {
-        display: none;
-        @media (max-width: 767px) {
-          display: block;
-        }
-      }
-      .header__logo {
-        width: 100px;
-        height: 89px;
-        background-image: url(../img/header/logo.png);
 
-        @media (max-width: 1023px) {
-          height: 45px;
-          width: 80px;
-          background-size: contain;
-          background-repeat: no-repeat;
-        }
-      }
-    }
-    .header__contacts {
-      @media (max-width: 863px) {
-        align-items: center;
-        justify-content: flex-end;
-      }
-      @media (max-width: 767px) {
-        display: none;
-      }
-      flex-grow: 4;
-      flex-shrink: 2;
-      display: flex;
-      justify-content: space-between;
-      .header__adress {
-        background-image: url(../img/header/locat.png);
-        background-repeat: no-repeat;
-        padding-left: 65px;
-        background-position: 2% 60%;
-        width: 339px;
-        height: 56px;
-        font-family: 'Exo 2';
-        font-style: normal;
-        font-weight: 600;
-        font-size: 1.5rem;
-        line-height: 2rem;
-        color: #ffffff;
-        @media (max-width: 863px) {
-          font-size: 1.2rem;
-          line-height: 1.4rem;
-          width: 295px;
-          height: 45px;
-          background-size: contain;
-          padding-left: 55px;
-        }
-      }
-      .header__phone {
-        width: 228px;
-        height: 61px;
-        padding-left: 68px;
-        background-image: url(../img/header/phone.png);
-        background-repeat: no-repeat;
-        background-position: 2% 60%;
-        @media (max-width: 863px) {
-          width: 196px;
-          height: 45px;
-          background-size: contain;
-          padding-left: 55px;
-        }
-        p {
-          font-family: 'Exo 2';
-          font-style: normal;
-          font-weight: 600;
-          font-size: 24px;
-          line-height: 32px;
-          color: #ffffff;
+  .container__menu {
+    position: relative;
+    .mobile__menu {
+      position: fixed;
+      height: 423px;
+      background-color: #000;
+      width: calc(100vw - 20px);
+      z-index: 21;
+      top: -423px;
+      transition: top 1.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+      ul {
+        padding-top: 92px;
+        padding-bottom: 85px;
+        text-align: center;
+        li {
+          margin-bottom: 20px;
           a {
             text-decoration: none;
-          }
-
-          @media (max-width: 863px) {
-            font-size: 19px;
-            line-height: 21px;
+            font-family: 'Exo 2';
+            font-style: normal;
+            font-weight: normal;
+            line-height: 24px;
+            color: #fff;
           }
         }
-        a {
+      }
+    }
+    .header__row {
+      z-index: 23;
+      height: 119px;
+      @media (max-width: 767px) {
+        height: 65px;
+      }
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-basis: 400px;
+      .header__logo-burger {
+        flex-grow: 15;
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        .header__menu-burger {
+          display: none;
+          @media (max-width: 767px) {
+            display: block;
+          }
+        }
+        .header__logo {
+          width: 100px;
+          height: 89px;
+          background-image: url(../img/header/logo.png);
+
+          @media (max-width: 1023px) {
+            height: 45px;
+            width: 80px;
+            background-size: contain;
+            background-repeat: no-repeat;
+          }
+        }
+      }
+      .header__contacts {
+        @media (max-width: 863px) {
+          align-items: center;
+          justify-content: flex-end;
+        }
+        @media (max-width: 767px) {
+          display: none;
+        }
+        flex-grow: 4;
+        flex-shrink: 2;
+        display: flex;
+        justify-content: space-between;
+        .header__adress {
+          background-image: url(../img/header/locat.png);
+          background-repeat: no-repeat;
+          padding-left: 65px;
+          background-position: 2% 60%;
+          width: 339px;
+          height: 56px;
           font-family: 'Exo 2';
           font-style: normal;
           font-weight: 600;
-          font-size: 24px;
-          line-height: 32px;
+          font-size: 1.5rem;
+          line-height: 2rem;
           color: #ffffff;
           @media (max-width: 863px) {
-            font-size: 19px;
-            line-height: 21px;
+            font-size: 1.2rem;
+            line-height: 1.4rem;
+            width: 295px;
+            height: 45px;
+            background-size: contain;
+            padding-left: 55px;
+          }
+        }
+        .header__phone {
+          width: 228px;
+          height: 61px;
+          padding-left: 68px;
+          background-image: url(../img/header/phone.png);
+          background-repeat: no-repeat;
+          background-position: 2% 60%;
+          @media (max-width: 863px) {
+            width: 196px;
+            height: 45px;
+            background-size: contain;
+            padding-left: 55px;
+          }
+          p {
+            font-family: 'Exo 2';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 32px;
+            color: #ffffff;
+            a {
+              text-decoration: none;
+            }
+
+            @media (max-width: 863px) {
+              font-size: 19px;
+              line-height: 21px;
+            }
+          }
+          a {
+            font-family: 'Exo 2';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 32px;
+            color: #ffffff;
+            @media (max-width: 863px) {
+              font-size: 19px;
+              line-height: 21px;
+            }
           }
         }
       }

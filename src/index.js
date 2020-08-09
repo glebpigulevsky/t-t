@@ -6,6 +6,8 @@ const fileBanner = document.querySelector('.input-file');
 const commentBanner = document.querySelector('.comment_banner');
 const btnReadmore = document.querySelector('.toogle__btn-readmore');
 const btnReadless = document.querySelector('.toogle__btn-readless');
+const btnMenu = document.querySelector('.header__menu-burger');
+const mobileMenu = document.querySelector('.mobile__menu');
 
 const nameBannerAbout = document.querySelector('.name_banner_about_mobile');
 const phoneBannerAbout = document.querySelector('.phone_banner_about_mobile');
@@ -41,6 +43,13 @@ const errorMessage = {
 Пожалуйста, выберите файл меньшего размера(не более 2 мб)
 </p>`,
 };
+btnMenu.addEventListener('click', () => {
+  if (document.querySelector('.mobile__menu').style.top !== '0%') {
+    document.querySelector('.mobile__menu').style.top = 0 + '%';
+  } else {
+    document.querySelector('.mobile__menu').style.top = '-423px';
+  }
+});
 
 btnReadmore.addEventListener('click', async () => {
   btnReadmore.style.display = 'none';
@@ -179,4 +188,14 @@ closeModal.addEventListener('click', () => {
 closeErrorFromModal.addEventListener('click', () => {
   document.querySelector('.error_form').classList.add('hidden');
   errorInsertBlock.innerHTML = '';
+});
+
+mobileMenu.addEventListener('touchmove', (e) => {
+  e.preventDefault();
+  document.querySelector('.mobile__menu').style.top = '-423px';
+});
+document.addEventListener('click', (e) => {
+  if (e.target.classList.contains('mobileMenu__item')) {
+    document.querySelector('.mobile__menu').style.top = '-423px';
+  }
 });
