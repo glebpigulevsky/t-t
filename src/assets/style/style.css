@@ -692,6 +692,11 @@ header .header__row .header__contacts .header__phone a {
   }
 }
 
+.problems__order_flex {
+  display: flex;
+  flex-direction: column;
+}
+
 .problems__main-title--mobile {
   font-family: "Exo 2";
   font-style: normal;
@@ -709,6 +714,7 @@ header .header__row .header__contacts .header__phone a {
 }
 
 .problems__text {
+  order: 1;
   margin-top: 50px;
   font-family: "Exo 2";
   font-style: normal;
@@ -720,14 +726,17 @@ header .header__row .header__contacts .header__phone a {
 @media (max-width: 767px) {
   .problems__text {
     display: none;
+    order: 3;
   }
 }
 
 .problem-verticalline {
+  order: 2;
   margin-top: 70px;
 }
 @media (max-width: 767px) {
   .problem-verticalline {
+    order: 1;
     margin-top: 20px;
   }
 }
@@ -768,6 +777,14 @@ header .header__row .header__contacts .header__phone a {
   }
 }
 
+.problem-blinking {
+  order: 3;
+}
+@media (max-width: 767px) {
+  .problem-blinking {
+    order: 2;
+  }
+}
 .problem-blinking h3 {
   padding-top: 84px;
   padding-bottom: 50px;
@@ -863,6 +880,27 @@ header .header__row .header__contacts .header__phone a {
   }
 }
 
+.lcd-structure {
+  order: 4;
+}
+.lcd-structure .toogle__btn-readless {
+  text-align: center;
+  margin-top: 20px;
+}
+.lcd-structure .toogle__btn-readless a {
+  font-family: "Exo 2";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 21px;
+  text-align: center;
+  color: #ff0000;
+}
+@media (min-width: 767px) {
+  .lcd-structure .toogle__btn-readless {
+    display: none;
+  }
+}
 @media (max-width: 767px) {
   .lcd-structure {
     display: none;

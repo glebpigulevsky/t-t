@@ -4,6 +4,10 @@
     margin-top: 40px;
   }
 }
+.problems__order_flex {
+  display: flex;
+  flex-direction: column;
+}
 .problems__main-title--mobile {
   font-family: 'Exo 2';
   font-style: normal;
@@ -19,6 +23,7 @@
 }
 
 .problems__text {
+  order: 1;
   margin-top: 50px;
   font-family: 'Exo 2';
   font-style: normal;
@@ -28,12 +33,15 @@
   color: #000000;
   @media (max-width: 767px) {
     display: none;
+    order: 3;
   }
 }
 
 .problem-verticalline {
+  order: 2;
   margin-top: 70px;
   @media (max-width: 767px) {
+    order: 1;
     margin-top: 20px;
   }
 
@@ -71,6 +79,10 @@
 }
 
 .problem-blinking {
+  @media (max-width: 767px) {
+    order: 2;
+  }
+  order: 3;
   h3 {
     padding-top: 84px;
     padding-bottom: 50px;
@@ -159,6 +171,23 @@
   }
 }
 .lcd-structure {
+  .toogle__btn-readless {
+    text-align: center;
+    margin-top: 20px;
+    a {
+      font-family: 'Exo 2';
+      font-style: normal;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 21px;
+      text-align: center;
+      color: #ff0000;
+    }
+    @media (min-width: 767px) {
+      display: none;
+    }
+  }
+  order: 4;
   @media (max-width: 767px) {
     display: none;
   }

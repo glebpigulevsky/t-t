@@ -4,6 +4,8 @@ const nameBanner = document.querySelector('.name_banner');
 const phoneBanner = document.querySelector('.phone_banner');
 const fileBanner = document.querySelector('.input-file');
 const commentBanner = document.querySelector('.comment_banner');
+const btnReadmore = document.querySelector('.toogle__btn-readmore');
+const btnReadless = document.querySelector('.toogle__btn-readless');
 
 const nameBannerAbout = document.querySelector('.name_banner_about_mobile');
 const phoneBannerAbout = document.querySelector('.phone_banner_about_mobile');
@@ -39,6 +41,20 @@ const errorMessage = {
 Пожалуйста, выберите файл меньшего размера(не более 2 мб)
 </p>`,
 };
+
+btnReadmore.addEventListener('click', async () => {
+  btnReadmore.style.display = 'none';
+  document.querySelector('.problems__text').style.display = 'block';
+  document.querySelector('.lcd-structure').style.display = 'block';
+  btnReadless.style.display = 'block';
+});
+
+btnReadless.addEventListener('click', () => {
+  btnReadmore.style.display = 'block';
+  document.querySelector('.problems__text').style.display = 'none';
+  document.querySelector('.lcd-structure').style.display = 'none';
+  btnReadless.style.display = 'none';
+});
 
 document.addEventListener('click', async (e) => {
   if (e.target === document.querySelector('.input_button-contacts_mobile')) {
