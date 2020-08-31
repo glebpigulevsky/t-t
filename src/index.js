@@ -130,7 +130,7 @@ document.addEventListener('click', async (e) => {
     } else if (fileBanner.files[0].type !== 'image/jpeg') {
       document.querySelector('.error_form').classList.remove('hidden');
       errorInsertBlock.innerHTML = errorMessage.fileType;
-    } else if (fileBanner.files[0].size > 200000) {
+    } else if (fileBanner.files[0].size > 3000000) {
       document.querySelector('.error_form').classList.remove('hidden');
       errorInsertBlock.innerHTML = errorMessage.fileSize;
     } else {
