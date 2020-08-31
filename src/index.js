@@ -134,7 +134,6 @@ document.addEventListener('click', async (e) => {
       document.querySelector('.error_form').classList.remove('hidden');
       errorInsertBlock.innerHTML = errorMessage.fileSize;
     } else {
-      console.log(fileBanner.files[0]);
       const formD = new FormData();
       await formD.append('photo', fileBanner.files[0]);
       await formD.append('name', nameBanner.value);
@@ -151,23 +150,22 @@ document.addEventListener('click', async (e) => {
 
 async function sendFormTelegram(form) {
   try {
-    // const res = await axios.post('/', form);
-    // console.log(res.data);
+    const res = await axios.post('/', form);
 
-    // const url =
-    //   'https://api.telegram.org/bot1233667834:AAHz_bng0VaZaI8UxLH6QXHpBC8wU-04WIY/sendMessage?chat_id=-440657814&text=';
-    // const text =
-    //   'Заказ от: ' +
-    //   res.data.name +
-    //   '%0AТелефон: ' +
-    //   res.data.phone +
-    //   '%0AКомментарий: ' +
-    //   res.data.text;
-    // let sendedUrl = url + text;
-    // await fetch(sendedUrl);
-    // const photoLink =
-    //   'https://api.telegram.org/bot1233667834:AAHz_bng0VaZaI8UxLH6QXHpBC8wU-04WIY/sendPhoto?chat_id=-440657814&photo=';
-    // await fetch(photoLink + res.data.postImage);
+    const url =
+      'https://api.telegram.org/bot1233667834:AAHz_bng0VaZaI8UxLH6QXHpBC8wU-04WIY/sendMessage?chat_id=-440657814&text=';
+    const text =
+      'Заказ от: ' +
+      res.data.name +
+      '%0AТелефон: ' +
+      res.data.phone +
+      '%0AКомментарий: ' +
+      res.data.text;
+    let sendedUrl = url + text;
+    await fetch(sendedUrl);
+    const photoLink =
+      'https://api.telegram.org/bot1233667834:AAHz_bng0VaZaI8UxLH6QXHpBC8wU-04WIY/sendPhoto?chat_id=-440657814&photo=';
+    await fetch(photoLink + res.data.postImage);
     openModal();
   } catch (err) {
     console.log(err);
