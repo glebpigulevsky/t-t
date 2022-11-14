@@ -33,7 +33,7 @@
     "eslint-config-airbnb": "^18.1.0",
     "sass": "^1.26.5",
     "webpack": "^4.43.0",
-    "webpack-cli": "^3.3.11"
+    "webpack-cli": "^3.3.12"
   },
   "dependencies": {
     "axios": "^0.19.2",
